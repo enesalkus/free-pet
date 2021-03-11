@@ -91,5 +91,50 @@ namespace FreePet
                 girisYap();
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel2.Dock = DockStyle.Fill;
+            panel2.BringToFront();
+            panel2.Visible = true;
+            panel1.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel1.Dock = DockStyle.Fill;
+            panel1.BringToFront();
+            panel1.Visible = true;
+            panel2.Visible = false;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+            if(k_adsoyad.Text!="" && k_eposta.Text!="" && k_kullaniciadi.Text!="" && k_sifre.Text!="")
+            {
+                if(k_sifre.Text == k_sifretekrar.Text)
+                {
+                    RedisValue rv1 = bag.HashGet("Users",k_kullaniciadi.Text);
+                    if (!rv1.HasValue)
+                    {
+                        string veri = k_adsoyad.Text + ";" + k_sifre.Text+";"+k_eposta.Text;
+                        bag.HashSet("Users", k_kullaniciadi.Text,veri);
+                    }
+                    else MessageBox.Show("Böyle Bir Kullanıcı Zaten Mevcut.");
+                }
+                else MessageBox.Show("Şifreler Uyuşmuyor.");
+            }
+            else MessageBox.Show("Lütfen Tüm Alanları Doldurun.");
+
+
+
+
+        }
     }
 }
