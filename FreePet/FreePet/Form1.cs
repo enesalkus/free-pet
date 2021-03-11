@@ -19,7 +19,12 @@ namespace FreePet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("umut");
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

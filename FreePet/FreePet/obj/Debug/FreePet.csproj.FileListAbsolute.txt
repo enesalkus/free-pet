@@ -8,3 +8,13 @@ C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csproj.Ge
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csproj.CoreCompileInputs.cache
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.exe
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.pdb
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\FreePet.exe.config
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\FreePet.exe
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\FreePet.pdb
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csprojAssemblyReference.cache
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Form1.resources
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Properties.Resources.resources
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csproj.GenerateResource.cache
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csproj.CoreCompileInputs.cache
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.exe
+C:\Users\Savaş\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.pdb
