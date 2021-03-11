@@ -21,5 +21,10 @@ namespace FreePet
         {
             Application.Exit();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            label1.Text = Genel.adsoyad + "\n" + Genel.kad + "\n" + Genel.sifre + "\n" + Genel.eposta;
+        }
     }
 }
