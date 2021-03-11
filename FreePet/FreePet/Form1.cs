@@ -31,8 +31,9 @@ namespace FreePet
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void girisYap()
         {
+
             if (textBox1.Text != "" && textBox2.Text != "" && textBox1.Text != "Kullanıcı Adı" && textBox2.Text != "Şifre")
             {
                 string kad = textBox1.Text, pass = textBox2.Text;
@@ -51,10 +52,12 @@ namespace FreePet
                 else MessageBox.Show("Böyle bir kullanıcı bulunamadı");
             }
             else MessageBox.Show("Lütfen tüm alanları doldurunuz.");
+        }
 
 
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            girisYap();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -79,6 +82,14 @@ namespace FreePet
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("test");
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                girisYap();
+            }
         }
     }
 }
