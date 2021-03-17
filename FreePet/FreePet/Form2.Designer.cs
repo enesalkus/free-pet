@@ -31,20 +31,42 @@ namespace FreePet
         {
             this.menu1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.menu = new System.Windows.Forms.Panel();
+            this.menu6 = new System.Windows.Forms.Button();
             this.menu5 = new System.Windows.Forms.Button();
             this.menu4 = new System.Windows.Forms.Button();
             this.menu3 = new System.Windows.Forms.Button();
             this.menu2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuBaslik = new System.Windows.Forms.Label();
-            this.menu6 = new System.Windows.Forms.Button();
+            this.menu2_Panel = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.galeri = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.menu2_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menu1
@@ -54,10 +76,9 @@ namespace FreePet
             this.menu1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menu1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu1.ForeColor = System.Drawing.Color.White;
-            this.menu1.Location = new System.Drawing.Point(0, 94);
-            this.menu1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menu1.Location = new System.Drawing.Point(0, 76);
             this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(267, 49);
+            this.menu1.Size = new System.Drawing.Size(200, 40);
             this.menu1.TabIndex = 1;
             this.menu1.Text = " Ana Sayfa";
             this.menu1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -67,43 +88,30 @@ namespace FreePet
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.menu);
             this.panel1.Controls.Add(this.menu6);
             this.panel1.Controls.Add(this.menu5);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.menu4);
             this.panel1.Controls.Add(this.menu3);
             this.panel1.Controls.Add(this.menu2);
             this.panel1.Controls.Add(this.menu1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 575);
+            this.panel1.Size = new System.Drawing.Size(201, 550);
             this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(96, 57);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(72, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 20);
+            this.label3.Size = new System.Drawing.Size(91, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "@kullaniciadi";
             // 
@@ -112,21 +120,35 @@ namespace FreePet
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(95, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(71, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 25);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Ad Soyad";
             // 
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.Red;
-            this.menu.Location = new System.Drawing.Point(0, 94);
-            this.menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menu.Location = new System.Drawing.Point(0, 76);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(7, 49);
+            this.menu.Size = new System.Drawing.Size(4, 40);
             this.menu.TabIndex = 3;
+            // 
+            // menu6
+            // 
+            this.menu6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.menu6.FlatAppearance.BorderSize = 0;
+            this.menu6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.menu6.ForeColor = System.Drawing.Color.White;
+            this.menu6.Location = new System.Drawing.Point(0, 326);
+            this.menu6.Name = "menu6";
+            this.menu6.Size = new System.Drawing.Size(200, 40);
+            this.menu6.TabIndex = 1;
+            this.menu6.Text = " Çıkış Yap";
+            this.menu6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu6.UseVisualStyleBackColor = true;
+            this.menu6.Click += new System.EventHandler(this.menu6_Click);
             // 
             // menu5
             // 
@@ -135,10 +157,9 @@ namespace FreePet
             this.menu5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menu5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu5.ForeColor = System.Drawing.Color.White;
-            this.menu5.Location = new System.Drawing.Point(0, 340);
-            this.menu5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menu5.Location = new System.Drawing.Point(0, 276);
             this.menu5.Name = "menu5";
-            this.menu5.Size = new System.Drawing.Size(267, 49);
+            this.menu5.Size = new System.Drawing.Size(200, 40);
             this.menu5.TabIndex = 1;
             this.menu5.Text = " Acil Veteriner";
             this.menu5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -152,10 +173,9 @@ namespace FreePet
             this.menu4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menu4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu4.ForeColor = System.Drawing.Color.White;
-            this.menu4.Location = new System.Drawing.Point(0, 278);
-            this.menu4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menu4.Location = new System.Drawing.Point(0, 226);
             this.menu4.Name = "menu4";
-            this.menu4.Size = new System.Drawing.Size(267, 49);
+            this.menu4.Size = new System.Drawing.Size(200, 40);
             this.menu4.TabIndex = 1;
             this.menu4.Text = " Pet Taxi";
             this.menu4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,10 +189,9 @@ namespace FreePet
             this.menu3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menu3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu3.ForeColor = System.Drawing.Color.White;
-            this.menu3.Location = new System.Drawing.Point(0, 217);
-            this.menu3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menu3.Location = new System.Drawing.Point(0, 176);
             this.menu3.Name = "menu3";
-            this.menu3.Size = new System.Drawing.Size(267, 49);
+            this.menu3.Size = new System.Drawing.Size(200, 40);
             this.menu3.TabIndex = 1;
             this.menu3.Text = " Bağış Kanalları";
             this.menu3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,10 +205,9 @@ namespace FreePet
             this.menu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menu2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu2.ForeColor = System.Drawing.Color.White;
-            this.menu2.Location = new System.Drawing.Point(0, 155);
-            this.menu2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menu2.Location = new System.Drawing.Point(0, 126);
             this.menu2.Name = "menu2";
-            this.menu2.Size = new System.Drawing.Size(267, 49);
+            this.menu2.Size = new System.Drawing.Size(200, 40);
             this.menu2.TabIndex = 1;
             this.menu2.Text = " İlan Sayfası";
             this.menu2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,51 +219,272 @@ namespace FreePet
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.menuBaslik);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(267, 0);
+            this.panel2.Location = new System.Drawing.Point(201, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(801, 58);
+            this.panel2.Size = new System.Drawing.Size(916, 48);
             this.panel2.TabIndex = 3;
             // 
             // menuBaslik
             // 
+            this.menuBaslik.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.menuBaslik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menuBaslik.ForeColor = System.Drawing.Color.White;
-            this.menuBaslik.Location = new System.Drawing.Point(8, 9);
-            this.menuBaslik.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.menuBaslik.Location = new System.Drawing.Point(6, 7);
             this.menuBaslik.Name = "menuBaslik";
-            this.menuBaslik.Size = new System.Drawing.Size(780, 40);
+            this.menuBaslik.Size = new System.Drawing.Size(897, 32);
             this.menuBaslik.TabIndex = 0;
             this.menuBaslik.Text = "Ana Sayfa";
             this.menuBaslik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // menu6
+            // menu2_Panel
             // 
-            this.menu6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.menu6.FlatAppearance.BorderSize = 0;
-            this.menu6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menu6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.menu6.ForeColor = System.Drawing.Color.White;
-            this.menu6.Location = new System.Drawing.Point(0, 400);
-            this.menu6.Margin = new System.Windows.Forms.Padding(4);
-            this.menu6.Name = "menu6";
-            this.menu6.Size = new System.Drawing.Size(267, 49);
-            this.menu6.TabIndex = 1;
-            this.menu6.Text = " Çıkış Yap";
-            this.menu6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu6.UseVisualStyleBackColor = true;
-            this.menu6.Click += new System.EventHandler(this.menu6_Click);
+            this.menu2_Panel.Controls.Add(this.galeri);
+            this.menu2_Panel.Controls.Add(this.checkBox1);
+            this.menu2_Panel.Controls.Add(this.numericUpDown1);
+            this.menu2_Panel.Controls.Add(this.comboBox3);
+            this.menu2_Panel.Controls.Add(this.button2);
+            this.menu2_Panel.Controls.Add(this.button1);
+            this.menu2_Panel.Controls.Add(this.comboBox2);
+            this.menu2_Panel.Controls.Add(this.comboBox1);
+            this.menu2_Panel.Controls.Add(this.richTextBox1);
+            this.menu2_Panel.Controls.Add(this.label4);
+            this.menu2_Panel.Controls.Add(this.label8);
+            this.menu2_Panel.Controls.Add(this.label7);
+            this.menu2_Panel.Controls.Add(this.label6);
+            this.menu2_Panel.Controls.Add(this.textBox2);
+            this.menu2_Panel.Controls.Add(this.textBox3);
+            this.menu2_Panel.Controls.Add(this.label5);
+            this.menu2_Panel.Controls.Add(this.label1);
+            this.menu2_Panel.Controls.Add(this.textBox6);
+            this.menu2_Panel.Controls.Add(this.textBox1);
+            this.menu2_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menu2_Panel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.menu2_Panel.ForeColor = System.Drawing.Color.White;
+            this.menu2_Panel.Location = new System.Drawing.Point(201, 48);
+            this.menu2_Panel.Name = "menu2_Panel";
+            this.menu2_Panel.Size = new System.Drawing.Size(916, 502);
+            this.menu2_Panel.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(145, 82);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(270, 27);
+            this.textBox1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 88);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hayvan Adı :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 21);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "İlan Başlığı : ";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(42, 326);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(539, 105);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 125);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 21);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Hayvan Türü :";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(145, 162);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(270, 27);
+            this.textBox3.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 165);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 21);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Hayvan Cinsi :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 209);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 21);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Hayvan Yaşı :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 246);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(127, 21);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Engel Durumu :";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(145, 46);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(270, 27);
+            this.textBox6.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Köpek",
+            "Kedi",
+            "Kuş",
+            "Tavşan",
+            "Balık",
+            "Diğer"});
+            this.comboBox1.Location = new System.Drawing.Point(145, 120);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(150, 28);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(301, 120);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(114, 27);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Visible = false;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Günlük",
+            "Haftalık",
+            "Aylık",
+            "Yaşında"});
+            this.comboBox2.Location = new System.Drawing.Point(207, 206);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(88, 28);
+            this.comboBox2.TabIndex = 5;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Var",
+            "Yok"});
+            this.comboBox3.Location = new System.Drawing.Point(145, 244);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(150, 28);
+            this.comboBox3.TabIndex = 6;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown1.Location = new System.Drawing.Point(145, 207);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(56, 27);
+            this.numericUpDown1.TabIndex = 7;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBox1.Location = new System.Drawing.Point(145, 289);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(198, 24);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "İletişim Bilgilerimi Göster";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(62, 450);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 40);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "İlanı Oluştur";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.menu6_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(392, 450);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(174, 40);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Fotoğraf Yükle";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // galeri
+            // 
+            this.galeri.AutoScroll = true;
+            this.galeri.Dock = System.Windows.Forms.DockStyle.Right;
+            this.galeri.Location = new System.Drawing.Point(604, 0);
+            this.galeri.Name = "galeri";
+            this.galeri.Size = new System.Drawing.Size(312, 502);
+            this.galeri.TabIndex = 9;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1068, 575);
+            this.ClientSize = new System.Drawing.Size(1117, 550);
+            this.Controls.Add(this.menu2_Panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ana Sayfa";
@@ -253,8 +492,11 @@ namespace FreePet
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.menu2_Panel.ResumeLayout(false);
+            this.menu2_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -267,11 +509,31 @@ namespace FreePet
         private System.Windows.Forms.Button menu4;
         private System.Windows.Forms.Button menu3;
         private System.Windows.Forms.Button menu2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label menuBaslik;
         private System.Windows.Forms.Button menu6;
+        private System.Windows.Forms.Panel menu2_Panel;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel galeri;
     }
 }
