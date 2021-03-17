@@ -202,5 +202,10 @@ namespace FreePet
                 MessageBox.Show("Lütfen Tüm Alanları Doldurun.");
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
