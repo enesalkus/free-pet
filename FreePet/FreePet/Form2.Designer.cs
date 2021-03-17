@@ -36,37 +36,38 @@ namespace FreePet
             this.menu = new System.Windows.Forms.Panel();
             this.menu6 = new System.Windows.Forms.Button();
             this.menu5 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menu4 = new System.Windows.Forms.Button();
             this.menu3 = new System.Windows.Forms.Button();
             this.menu2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuBaslik = new System.Windows.Forms.Label();
             this.menu2_Panel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.galeri = new System.Windows.Forms.Panel();
+            this.iletisimBilgisi = new System.Windows.Forms.CheckBox();
+            this.hayvanYasi = new System.Windows.Forms.NumericUpDown();
+            this.fotoYukle = new System.Windows.Forms.Button();
+            this.ilanOlustur = new System.Windows.Forms.Button();
+            this.hayvanYasi2 = new System.Windows.Forms.ComboBox();
+            this.hayvanTuru = new System.Windows.Forms.ComboBox();
+            this.ilanAciklama = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.hayvanTuru2 = new System.Windows.Forms.TextBox();
+            this.hayvanCinsi = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ilanBaslik = new System.Windows.Forms.TextBox();
+            this.hayvanAdi = new System.Windows.Forms.TextBox();
+            this.engelDurumu2 = new System.Windows.Forms.RadioButton();
+            this.engelDurumu = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.menu2_Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hayvanYasi)).BeginInit();
             this.SuspendLayout();
             // 
             // menu1
@@ -166,6 +167,16 @@ namespace FreePet
             this.menu5.UseVisualStyleBackColor = true;
             this.menu5.Click += new System.EventHandler(this.menu5_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 63);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // menu4
             // 
             this.menu4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -220,7 +231,7 @@ namespace FreePet
             this.panel2.Controls.Add(this.menuBaslik);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(201, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(916, 48);
             this.panel2.TabIndex = 3;
@@ -240,25 +251,26 @@ namespace FreePet
             // 
             // menu2_Panel
             // 
+            this.menu2_Panel.Controls.Add(this.engelDurumu);
+            this.menu2_Panel.Controls.Add(this.engelDurumu2);
             this.menu2_Panel.Controls.Add(this.galeri);
-            this.menu2_Panel.Controls.Add(this.checkBox1);
-            this.menu2_Panel.Controls.Add(this.numericUpDown1);
-            this.menu2_Panel.Controls.Add(this.comboBox3);
-            this.menu2_Panel.Controls.Add(this.button2);
-            this.menu2_Panel.Controls.Add(this.button1);
-            this.menu2_Panel.Controls.Add(this.comboBox2);
-            this.menu2_Panel.Controls.Add(this.comboBox1);
-            this.menu2_Panel.Controls.Add(this.richTextBox1);
+            this.menu2_Panel.Controls.Add(this.iletisimBilgisi);
+            this.menu2_Panel.Controls.Add(this.hayvanYasi);
+            this.menu2_Panel.Controls.Add(this.fotoYukle);
+            this.menu2_Panel.Controls.Add(this.ilanOlustur);
+            this.menu2_Panel.Controls.Add(this.hayvanYasi2);
+            this.menu2_Panel.Controls.Add(this.hayvanTuru);
+            this.menu2_Panel.Controls.Add(this.ilanAciklama);
             this.menu2_Panel.Controls.Add(this.label4);
             this.menu2_Panel.Controls.Add(this.label8);
             this.menu2_Panel.Controls.Add(this.label7);
             this.menu2_Panel.Controls.Add(this.label6);
-            this.menu2_Panel.Controls.Add(this.textBox2);
-            this.menu2_Panel.Controls.Add(this.textBox3);
+            this.menu2_Panel.Controls.Add(this.hayvanTuru2);
+            this.menu2_Panel.Controls.Add(this.hayvanCinsi);
             this.menu2_Panel.Controls.Add(this.label5);
             this.menu2_Panel.Controls.Add(this.label1);
-            this.menu2_Panel.Controls.Add(this.textBox6);
-            this.menu2_Panel.Controls.Add(this.textBox1);
+            this.menu2_Panel.Controls.Add(this.ilanBaslik);
+            this.menu2_Panel.Controls.Add(this.hayvanAdi);
             this.menu2_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menu2_Panel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu2_Panel.ForeColor = System.Drawing.Color.White;
@@ -267,21 +279,107 @@ namespace FreePet
             this.menu2_Panel.Size = new System.Drawing.Size(916, 502);
             this.menu2_Panel.TabIndex = 4;
             // 
-            // textBox1
+            // galeri
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 27);
-            this.textBox1.TabIndex = 0;
+            this.galeri.AutoScroll = true;
+            this.galeri.Dock = System.Windows.Forms.DockStyle.Right;
+            this.galeri.Location = new System.Drawing.Point(604, 0);
+            this.galeri.Name = "galeri";
+            this.galeri.Size = new System.Drawing.Size(312, 502);
+            this.galeri.TabIndex = 9;
             // 
-            // label1
+            // iletisimBilgisi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hayvan Adı :";
+            this.iletisimBilgisi.AutoSize = true;
+            this.iletisimBilgisi.Checked = true;
+            this.iletisimBilgisi.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.iletisimBilgisi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.iletisimBilgisi.Location = new System.Drawing.Point(145, 289);
+            this.iletisimBilgisi.Name = "iletisimBilgisi";
+            this.iletisimBilgisi.Size = new System.Drawing.Size(198, 24);
+            this.iletisimBilgisi.TabIndex = 8;
+            this.iletisimBilgisi.Text = "İletişim Bilgilerimi Göster";
+            this.iletisimBilgisi.UseVisualStyleBackColor = true;
+            // 
+            // hayvanYasi
+            // 
+            this.hayvanYasi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.hayvanYasi.Location = new System.Drawing.Point(145, 207);
+            this.hayvanYasi.Name = "hayvanYasi";
+            this.hayvanYasi.Size = new System.Drawing.Size(56, 27);
+            this.hayvanYasi.TabIndex = 7;
+            this.hayvanYasi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // fotoYukle
+            // 
+            this.fotoYukle.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.fotoYukle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fotoYukle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.fotoYukle.ForeColor = System.Drawing.Color.White;
+            this.fotoYukle.Location = new System.Drawing.Point(392, 450);
+            this.fotoYukle.Name = "fotoYukle";
+            this.fotoYukle.Size = new System.Drawing.Size(174, 40);
+            this.fotoYukle.TabIndex = 1;
+            this.fotoYukle.Text = "Fotoğraf Yükle";
+            this.fotoYukle.UseVisualStyleBackColor = true;
+            this.fotoYukle.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ilanOlustur
+            // 
+            this.ilanOlustur.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ilanOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ilanOlustur.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ilanOlustur.ForeColor = System.Drawing.Color.White;
+            this.ilanOlustur.Location = new System.Drawing.Point(62, 450);
+            this.ilanOlustur.Name = "ilanOlustur";
+            this.ilanOlustur.Size = new System.Drawing.Size(200, 40);
+            this.ilanOlustur.TabIndex = 1;
+            this.ilanOlustur.Text = "İlanı Oluştur";
+            this.ilanOlustur.UseVisualStyleBackColor = true;
+            this.ilanOlustur.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // hayvanYasi2
+            // 
+            this.hayvanYasi2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.hayvanYasi2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.hayvanYasi2.FormattingEnabled = true;
+            this.hayvanYasi2.Items.AddRange(new object[] {
+            "Günlük",
+            "Haftalık",
+            "Aylık",
+            "Yaşında"});
+            this.hayvanYasi2.Location = new System.Drawing.Point(207, 206);
+            this.hayvanYasi2.Name = "hayvanYasi2";
+            this.hayvanYasi2.Size = new System.Drawing.Size(88, 28);
+            this.hayvanYasi2.TabIndex = 5;
+            this.hayvanYasi2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // hayvanTuru
+            // 
+            this.hayvanTuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.hayvanTuru.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.hayvanTuru.FormattingEnabled = true;
+            this.hayvanTuru.Items.AddRange(new object[] {
+            "Köpek",
+            "Kedi",
+            "Kuş",
+            "Tavşan",
+            "Balık",
+            "Diğer"});
+            this.hayvanTuru.Location = new System.Drawing.Point(145, 120);
+            this.hayvanTuru.Name = "hayvanTuru";
+            this.hayvanTuru.Size = new System.Drawing.Size(150, 28);
+            this.hayvanTuru.TabIndex = 5;
+            this.hayvanTuru.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // ilanAciklama
+            // 
+            this.ilanAciklama.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ilanAciklama.Location = new System.Drawing.Point(62, 326);
+            this.ilanAciklama.Name = "ilanAciklama";
+            this.ilanAciklama.Size = new System.Drawing.Size(504, 118);
+            this.ilanAciklama.TabIndex = 2;
+            this.ilanAciklama.Text = "";
             // 
             // label4
             // 
@@ -292,38 +390,14 @@ namespace FreePet
             this.label4.TabIndex = 1;
             this.label4.Text = "İlan Başlığı : ";
             // 
-            // richTextBox1
+            // label8
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(42, 326);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(539, 105);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 125);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 21);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Hayvan Türü :";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(145, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(270, 27);
-            this.textBox3.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 165);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 21);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Hayvan Cinsi :";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 246);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(127, 21);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Engel Durumu :";
             // 
             // label7
             // 
@@ -334,145 +408,83 @@ namespace FreePet
             this.label7.TabIndex = 1;
             this.label7.Text = "Hayvan Yaşı :";
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 246);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 21);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Engel Durumu :";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 165);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 21);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Hayvan Cinsi :";
             // 
-            // textBox6
+            // hayvanTuru2
             // 
-            this.textBox6.Location = new System.Drawing.Point(145, 46);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(270, 27);
-            this.textBox6.TabIndex = 0;
+            this.hayvanTuru2.Location = new System.Drawing.Point(301, 120);
+            this.hayvanTuru2.Name = "hayvanTuru2";
+            this.hayvanTuru2.Size = new System.Drawing.Size(114, 27);
+            this.hayvanTuru2.TabIndex = 0;
+            this.hayvanTuru2.Visible = false;
             // 
-            // comboBox1
+            // hayvanCinsi
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Köpek",
-            "Kedi",
-            "Kuş",
-            "Tavşan",
-            "Balık",
-            "Diğer"});
-            this.comboBox1.Location = new System.Drawing.Point(145, 120);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 28);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.hayvanCinsi.Location = new System.Drawing.Point(145, 162);
+            this.hayvanCinsi.Name = "hayvanCinsi";
+            this.hayvanCinsi.Size = new System.Drawing.Size(270, 27);
+            this.hayvanCinsi.TabIndex = 0;
             // 
-            // textBox2
+            // label5
             // 
-            this.textBox2.Location = new System.Drawing.Point(301, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 27);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.Visible = false;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 125);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 21);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Hayvan Türü :";
             // 
-            // comboBox2
+            // label1
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Günlük",
-            "Haftalık",
-            "Aylık",
-            "Yaşında"});
-            this.comboBox2.Location = new System.Drawing.Point(207, 206);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(88, 28);
-            this.comboBox2.TabIndex = 5;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 88);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hayvan Adı :";
             // 
-            // comboBox3
+            // ilanBaslik
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Var",
-            "Yok"});
-            this.comboBox3.Location = new System.Drawing.Point(145, 244);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(150, 28);
-            this.comboBox3.TabIndex = 6;
+            this.ilanBaslik.Location = new System.Drawing.Point(145, 46);
+            this.ilanBaslik.Name = "ilanBaslik";
+            this.ilanBaslik.Size = new System.Drawing.Size(270, 27);
+            this.ilanBaslik.TabIndex = 0;
             // 
-            // numericUpDown1
+            // hayvanAdi
             // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.Location = new System.Drawing.Point(145, 207);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(56, 27);
-            this.numericUpDown1.TabIndex = 7;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hayvanAdi.Location = new System.Drawing.Point(145, 82);
+            this.hayvanAdi.Name = "hayvanAdi";
+            this.hayvanAdi.Size = new System.Drawing.Size(270, 27);
+            this.hayvanAdi.TabIndex = 0;
             // 
-            // checkBox1
+            // engelDurumu2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkBox1.Location = new System.Drawing.Point(145, 289);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(198, 24);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "İletişim Bilgilerimi Göster";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.engelDurumu2.AutoSize = true;
+            this.engelDurumu2.Location = new System.Drawing.Point(208, 244);
+            this.engelDurumu2.Name = "engelDurumu2";
+            this.engelDurumu2.Size = new System.Drawing.Size(55, 25);
+            this.engelDurumu2.TabIndex = 10;
+            this.engelDurumu2.Text = "Var";
+            this.engelDurumu2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // engelDurumu
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 63);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(62, 450);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "İlanı Oluştur";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.menu6_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(392, 450);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Fotoğraf Yükle";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // galeri
-            // 
-            this.galeri.AutoScroll = true;
-            this.galeri.Dock = System.Windows.Forms.DockStyle.Right;
-            this.galeri.Location = new System.Drawing.Point(604, 0);
-            this.galeri.Name = "galeri";
-            this.galeri.Size = new System.Drawing.Size(312, 502);
-            this.galeri.TabIndex = 9;
+            this.engelDurumu.AutoSize = true;
+            this.engelDurumu.Checked = true;
+            this.engelDurumu.Location = new System.Drawing.Point(145, 244);
+            this.engelDurumu.Name = "engelDurumu";
+            this.engelDurumu.Size = new System.Drawing.Size(57, 25);
+            this.engelDurumu.TabIndex = 10;
+            this.engelDurumu.TabStop = true;
+            this.engelDurumu.Text = "Yok";
+            this.engelDurumu.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -492,11 +504,11 @@ namespace FreePet
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.menu2_Panel.ResumeLayout(false);
             this.menu2_Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hayvanYasi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -515,25 +527,26 @@ namespace FreePet
         private System.Windows.Forms.Label menuBaslik;
         private System.Windows.Forms.Button menu6;
         private System.Windows.Forms.Panel menu2_Panel;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ComboBox hayvanTuru;
+        private System.Windows.Forms.RichTextBox ilanAciklama;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox hayvanTuru2;
+        private System.Windows.Forms.TextBox hayvanCinsi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox ilanBaslik;
+        private System.Windows.Forms.TextBox hayvanAdi;
+        private System.Windows.Forms.ComboBox hayvanYasi2;
+        private System.Windows.Forms.NumericUpDown hayvanYasi;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox iletisimBilgisi;
+        private System.Windows.Forms.Button ilanOlustur;
+        private System.Windows.Forms.Button fotoYukle;
         private System.Windows.Forms.Panel galeri;
+        private System.Windows.Forms.RadioButton engelDurumu;
+        private System.Windows.Forms.RadioButton engelDurumu2;
     }
 }

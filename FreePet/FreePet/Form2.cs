@@ -1,8 +1,10 @@
-﻿using System;
+﻿using StackExchange.Redis;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,8 +70,8 @@ namespace FreePet
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedItem.ToString()=="Diğer") textBox2.Visible = true;
-            else textBox2.Visible = false;
+            if(hayvanTuru.SelectedItem.ToString()=="Diğer") hayvanTuru2.Visible = true;
+            else hayvanTuru2.Visible = false;
         }
 
         Dictionary<string, string> resimler = new Dictionary<string, string>();
@@ -103,6 +105,30 @@ namespace FreePet
                 }
             }
           
+        }
+
+        static readonly ConnectionMultiplexer muxer = ConnectionMultiplexer.Connect("185.93.69.87:6379,password=");
+        IDatabase bag = muxer.GetDatabase();
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Random rdm = new Random();
+            int id = rdm.Next(100000, 1000000);
+            RedisValue rv = bag.HashGet("Advert", id);
+            if (!rv.HasValue)
+            {
+                foreach (var item in resimler.Values)
+                {
+                    byte[] imageArray = System.IO.File.ReadAllBytes(item.ToString());
+                    bag.ListInsertAfter("Images", bag.ListLength("Images") + 1, id + ";" + Convert.ToBase64String(imageArray));
+                }
+                string engel = engelDurumu.Text;
+                if (engelDurumu2.Checked == true) engel = engelDurumu2.Text;
+                bag.HashSet("Advert", id, ilanBaslik.Text + ";" + hayvanAdi.Text + ";"
+                    + hayvanTuru.Text + ";" +  hayvanYasi.Value + hayvanYasi2.Text + ";"
+                    + engel + ";" + (iletisimBilgisi.Checked ? "Evet" : "Hayır") + ";"
+                    + ilanAciklama.Text);
+            }
+            else this.InvokeOnClick(ilanOlustur, EventArgs.Empty);
         }
     }
 }
