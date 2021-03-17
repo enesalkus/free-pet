@@ -24,7 +24,20 @@ namespace FreePet
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            label1.Text = Genel.adsoyad + "\n" + Genel.kad + "\n" + Genel.sifre + "\n" + Genel.eposta;
+
+            label3.Text = Genel.adsoyad;
+            label2.Text = Genel.kad;
+           // label1.Text = Genel.adsoyad + "\n" + Genel.kad + "\n" + Genel.sifre + "\n" + Genel.eposta;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
