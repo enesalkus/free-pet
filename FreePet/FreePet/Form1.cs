@@ -19,7 +19,7 @@ namespace FreePet
             InitializeComponent();
         }
 
-        static readonly ConnectionMultiplexer muxer = ConnectionMultiplexer.Connect("185.93.69.87:6379,password=");
+        static readonly ConnectionMultiplexer muxer = ConnectionMultiplexer.Connect("localhost:6379,password=");
         IDatabase bag = muxer.GetDatabase();
 
         void girisGetir()
