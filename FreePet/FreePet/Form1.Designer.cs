@@ -39,6 +39,7 @@ namespace FreePet
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@ namespace FreePet
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -68,23 +68,21 @@ namespace FreePet
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Pristina", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 89);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 58);
+            this.label1.Size = new System.Drawing.Size(342, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Freepet Organization";
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(76, 204);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(57, 166);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(315, 28);
+            this.textBox1.Size = new System.Drawing.Size(237, 24);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "test";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -94,12 +92,11 @@ namespace FreePet
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(0, 5);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(0, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(316, 21);
+            this.textBox2.Size = new System.Drawing.Size(237, 17);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "123";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -109,11 +106,10 @@ namespace FreePet
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(95, 343);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(71, 279);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(279, 44);
+            this.button1.Size = new System.Drawing.Size(209, 36);
             this.button1.TabIndex = 2;
             this.button1.Text = "Giriş Yap";
             this.button1.UseVisualStyleBackColor = true;
@@ -123,10 +119,9 @@ namespace FreePet
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.linkLabel1.Location = new System.Drawing.Point(267, 299);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(200, 243);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(126, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(94, 13);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Şifreni mi unuttun?";
@@ -135,10 +130,9 @@ namespace FreePet
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(272, 487);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(204, 396);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -146,20 +140,18 @@ namespace FreePet
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(335, 487);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(251, 396);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(396, 487);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(297, 396);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
@@ -178,30 +170,38 @@ namespace FreePet
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(468, 551);
+            this.panel1.Size = new System.Drawing.Size(351, 448);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(316, 10);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(26, 26);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "x";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Location = new System.Drawing.Point(76, 241);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(57, 196);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(315, 29);
+            this.panel3.Size = new System.Drawing.Size(237, 24);
             this.panel3.TabIndex = 1;
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(175, 395);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(131, 321);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 30);
+            this.button3.Size = new System.Drawing.Size(89, 24);
             this.button3.TabIndex = 3;
             this.button3.Text = "Kayıt Ol";
             this.button3.UseVisualStyleBackColor = true;
@@ -223,19 +223,17 @@ namespace FreePet
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(468, 551);
+            this.panel2.Size = new System.Drawing.Size(351, 448);
             this.panel2.TabIndex = 10;
             this.panel2.Visible = false;
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Modern No. 20", 11F, System.Drawing.FontStyle.Italic);
-            this.button4.Location = new System.Drawing.Point(175, 410);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Italic);
+            this.button4.Location = new System.Drawing.Point(131, 333);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 30);
+            this.button4.Size = new System.Drawing.Size(89, 24);
             this.button4.TabIndex = 7;
             this.button4.Text = "Giriş Yap";
             this.button4.UseVisualStyleBackColor = true;
@@ -243,12 +241,11 @@ namespace FreePet
             // 
             // k_sifretekrar
             // 
-            this.k_sifretekrar.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.k_sifretekrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.k_sifretekrar.ForeColor = System.Drawing.Color.Silver;
-            this.k_sifretekrar.Location = new System.Drawing.Point(76, 293);
-            this.k_sifretekrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.k_sifretekrar.Location = new System.Drawing.Point(57, 238);
             this.k_sifretekrar.Name = "k_sifretekrar";
-            this.k_sifretekrar.Size = new System.Drawing.Size(315, 28);
+            this.k_sifretekrar.Size = new System.Drawing.Size(237, 24);
             this.k_sifretekrar.TabIndex = 5;
             this.k_sifretekrar.Text = "123";
             this.k_sifretekrar.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -256,12 +253,11 @@ namespace FreePet
             // 
             // k_adsoyad
             // 
-            this.k_adsoyad.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.k_adsoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.k_adsoyad.ForeColor = System.Drawing.Color.Silver;
-            this.k_adsoyad.Location = new System.Drawing.Point(76, 145);
-            this.k_adsoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.k_adsoyad.Location = new System.Drawing.Point(57, 118);
             this.k_adsoyad.Name = "k_adsoyad";
-            this.k_adsoyad.Size = new System.Drawing.Size(315, 28);
+            this.k_adsoyad.Size = new System.Drawing.Size(237, 24);
             this.k_adsoyad.TabIndex = 1;
             this.k_adsoyad.Text = "test";
             this.k_adsoyad.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -269,12 +265,11 @@ namespace FreePet
             // 
             // k_eposta
             // 
-            this.k_eposta.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.k_eposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.k_eposta.ForeColor = System.Drawing.Color.Silver;
-            this.k_eposta.Location = new System.Drawing.Point(76, 182);
-            this.k_eposta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.k_eposta.Location = new System.Drawing.Point(57, 148);
             this.k_eposta.Name = "k_eposta";
-            this.k_eposta.Size = new System.Drawing.Size(315, 28);
+            this.k_eposta.Size = new System.Drawing.Size(237, 24);
             this.k_eposta.TabIndex = 2;
             this.k_eposta.Text = "test";
             this.k_eposta.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -283,22 +278,20 @@ namespace FreePet
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Pristina", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 71);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(50, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(330, 58);
+            this.label2.Size = new System.Drawing.Size(342, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Freepet Organization";
             // 
             // k_kullaniciadi
             // 
-            this.k_kullaniciadi.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.k_kullaniciadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.k_kullaniciadi.ForeColor = System.Drawing.Color.Silver;
-            this.k_kullaniciadi.Location = new System.Drawing.Point(76, 219);
-            this.k_kullaniciadi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.k_kullaniciadi.Location = new System.Drawing.Point(57, 178);
             this.k_kullaniciadi.Name = "k_kullaniciadi";
-            this.k_kullaniciadi.Size = new System.Drawing.Size(315, 28);
+            this.k_kullaniciadi.Size = new System.Drawing.Size(237, 24);
             this.k_kullaniciadi.TabIndex = 3;
             this.k_kullaniciadi.Text = "test";
             this.k_kullaniciadi.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -307,21 +300,19 @@ namespace FreePet
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(396, 487);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(297, 396);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
             // 
             // k_sifre
             // 
-            this.k_sifre.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.k_sifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.k_sifre.ForeColor = System.Drawing.Color.Silver;
-            this.k_sifre.Location = new System.Drawing.Point(76, 256);
-            this.k_sifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.k_sifre.Location = new System.Drawing.Point(57, 208);
             this.k_sifre.Name = "k_sifre";
-            this.k_sifre.Size = new System.Drawing.Size(315, 28);
+            this.k_sifre.Size = new System.Drawing.Size(237, 24);
             this.k_sifre.TabIndex = 4;
             this.k_sifre.Text = "123";
             this.k_sifre.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -330,20 +321,18 @@ namespace FreePet
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(335, 487);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(251, 396);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(95, 358);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(71, 291);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(279, 44);
+            this.button2.Size = new System.Drawing.Size(209, 36);
             this.button2.TabIndex = 6;
             this.button2.Text = "Kayıt Ol";
             this.button2.UseVisualStyleBackColor = true;
@@ -352,33 +341,21 @@ namespace FreePet
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(272, 487);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(204, 396);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(421, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(35, 32);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "x";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(468, 551);
+            this.ClientSize = new System.Drawing.Size(351, 448);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FreePet";

@@ -25,15 +25,24 @@ namespace FreePet
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            sayfaDegistir(menu2);
+            sayfaDegistir(menu1);
             hayvanYasi2.SelectedIndex = 0;
             hayvanTuru.SelectedIndex = 0;
             label3.Text = "@" + Genel.kad;
             label2.Text = Genel.adsoyad;
-           // label1.Text = Genel.adsoyad + "\n" + Genel.kad + "\n" + Genel.sifre + "\n" + Genel.eposta;
         }
 
         string stage = "Ana Sayfa";
+
+        private void panelKapat()
+        {
+            menu1_Panel.Visible = false;
+            menu2_Panel.Visible = false;
+            menu3_Panel.Visible = false;
+            menu4_Panel.Visible = false;
+            menu5_Panel.Visible = false;
+            galeri.Visible = false;
+        }
         private void sayfaDegistir(Control c)
         {
             string[] menuler = { "menu1", "menu2", "menu3", "menu4", "menu5" };
@@ -51,20 +60,26 @@ namespace FreePet
             cl.Dock = DockStyle.Fill;
             cl.BringToFront();
             cl.Visible = true;
+            ilanlistele_Panel.Visible = false;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             sayfaDegistir(menu1);
             hayvanYasi2.SelectedIndex = 0;
             hayvanTuru.SelectedIndex = 0;
         }
-
         private void menu2_Click(object sender, EventArgs e)
         {
-            sayfaDegistir(menu2);
+            panelKapat();
+            menu.Location = new Point(0,126);
+            menuBaslik.Text = menu2.Text;
+            ilangoster_Panel.Size = new Size(375, 450);
+            ilanekle_Panel.Size = new Size(375, 450);
+            ilangoster_Panel.Location = new Point(260, 60);
+            ilanekle_Panel.Location = new Point(700, 60);
+            ilangoster_Panel.Visible = true;
+            ilanekle_Panel.Visible = true;           
         }
-
         private void menu3_Click(object sender, EventArgs e)
         {
             sayfaDegistir(menu3);
@@ -186,6 +201,34 @@ namespace FreePet
                 else this.InvokeOnClick(ilanOlustur, EventArgs.Empty);
             }
             else MessageBox.Show("Lütfen tüm alanları doldurunuz.");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            ilangoster_Panel.Visible = false;
+            ilanekle_Panel.Visible = false;
+            sayfaDegistir(menu2);
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {        
+            panelKapat();
+            galeri.Visible = true;
+            ilangoster_Panel.Visible = false;
+            ilanekle_Panel.Visible = false;
+            ilanlistele_Panel.Visible = true;
+            ilanlistele_Panel.Dock = DockStyle.Fill;
+            ilanlistele_Panel.BringToFront();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
