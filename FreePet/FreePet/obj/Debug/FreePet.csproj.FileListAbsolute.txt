@@ -1,7 +1,6 @@
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\FreePet.exe.config
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\FreePet.exe
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\FreePet.pdb
-C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csprojAssemblyReference.cache
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Form1.resources
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Properties.Resources.resources
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csproj.GenerateResource.cache
@@ -100,3 +99,5 @@ C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csproj
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csproj.CopyComplete
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.exe
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.pdb
+C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.ilan.resources
+C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csprojAssemblyReference.cache

@@ -157,7 +157,6 @@ namespace FreePet
             // 
             // panel1
             // 
-            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.button3);
@@ -168,17 +167,16 @@ namespace FreePet
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(77, 238);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 448);
+            this.panel1.Size = new System.Drawing.Size(121, 172);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(316, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(26, 26);
             this.button5.TabIndex = 9;
@@ -209,7 +207,6 @@ namespace FreePet
             // 
             // panel2
             // 
-            this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.k_sifretekrar);
             this.panel2.Controls.Add(this.k_adsoyad);
@@ -221,10 +218,9 @@ namespace FreePet
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(351, 448);
+            this.panel2.Size = new System.Drawing.Size(244, 220);
             this.panel2.TabIndex = 10;
             this.panel2.Visible = false;
             // 
