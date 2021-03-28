@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace FreePet
             InitializeComponent();
         }
 
-        static readonly ConnectionMultiplexer muxer = ConnectionMultiplexer.Connect("localhost:6379,password=");
+        static readonly ConnectionMultiplexer muxer = ConnectionMultiplexer.Connect(Genel.connString);
         IDatabase bag = muxer.GetDatabase();
 
         void girisGetir()
@@ -62,6 +63,8 @@ namespace FreePet
                         Genel.sifre = pass;
                         Genel.adsoyad = rv.ToString().Split(';')[0];
                         Genel.eposta = rv.ToString().Split(';')[2];
+                        if (rv.ToString().Split(';')[3] != "null")
+                            Genel.profil = Image.FromStream(new MemoryStream(Convert.FromBase64String(rv.ToString().Split(';')[3])));
                         MessageBox.Show("Giriş Başarılı");
                         Form2 frm2 = new Form2();
                         frm2.Show();
@@ -179,7 +182,7 @@ namespace FreePet
                     RedisValue rv1 = bag.HashGet("Users", k_kullaniciadi.Text);
                     if (!rv1.HasValue)
                     {
-                        string veri = k_adsoyad.Text + ";" + k_sifre.Text + ";" + k_eposta.Text;
+                        string veri = k_adsoyad.Text + ";" + k_sifre.Text + ";" + k_eposta.Text + ";null";
                         bag.HashSet("Users", k_kullaniciadi.Text, veri);
                         Genel.kad = k_kullaniciadi.Text;
                         Genel.sifre = k_sifre.Text;

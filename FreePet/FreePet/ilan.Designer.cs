@@ -29,6 +29,7 @@ namespace FreePet
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ilan));
             this.ilanFoto = new System.Windows.Forms.PictureBox();
             this.yas = new System.Windows.Forms.Label();
             this.cinsiyet = new System.Windows.Forms.Label();
@@ -46,7 +47,9 @@ namespace FreePet
             this.konum = new System.Windows.Forms.Label();
             this.konum1 = new System.Windows.Forms.Label();
             this.ilanBaslik = new System.Windows.Forms.LinkLabel();
+            this.sil = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ilanFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sil)).BeginInit();
             this.SuspendLayout();
             // 
             // ilanFoto
@@ -241,12 +244,26 @@ namespace FreePet
             this.ilanBaslik.Text = "İlan Başlık";
             this.ilanBaslik.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // sil
+            // 
+            this.sil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sil.Image = ((System.Drawing.Image)(resources.GetObject("sil.Image")));
+            this.sil.Location = new System.Drawing.Point(765, 4);
+            this.sil.Name = "sil";
+            this.sil.Size = new System.Drawing.Size(35, 35);
+            this.sil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.sil.TabIndex = 4;
+            this.sil.TabStop = false;
+            this.sil.Visible = false;
+            // 
             // ilan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.sil);
             this.Controls.Add(this.ilanBaslik);
             this.Controls.Add(this.ilanNo);
             this.Controls.Add(this.engelDurum1);
@@ -270,6 +287,7 @@ namespace FreePet
             this.Name = "ilan";
             this.Size = new System.Drawing.Size(804, 192);
             ((System.ComponentModel.ISupportInitialize)(this.ilanFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,5 +311,6 @@ namespace FreePet
         private System.Windows.Forms.Label konum1;
         public System.Windows.Forms.LinkLabel ilanBaslik;
         public System.Windows.Forms.PictureBox ilanFoto;
+        public System.Windows.Forms.PictureBox sil;
     }
 }

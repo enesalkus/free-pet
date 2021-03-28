@@ -23,6 +23,9 @@ namespace FreePet
             InitializeComponent();
         }
 
+        static readonly ConnectionMultiplexer muxer = ConnectionMultiplexer.Connect(Genel.connString);
+        IDatabase bag = muxer.GetDatabase();
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         [DllImportAttribute("user32.dll")]
@@ -51,6 +54,7 @@ namespace FreePet
             hayvanTuru.SelectedIndex = 0;
             label3.Text = "@" + Genel.kad;
             label2.Text = Genel.adsoyad;
+            pictureBox4.Image = Genel.profil;
         }
 
         public void sayfaDegistir(Control c)
@@ -146,6 +150,22 @@ namespace FreePet
         {
             Form1 frm1 = new Form1(); frm1.Show(); this.Close();
         }
+        private void sil_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("İlanınızı kaldırmak istediğinize emin misiniz?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                PictureBox p = (PictureBox)sender;
+                bag.HashDelete("Advert", p.Tag.ToString());
+                for (int i = 0; i < bag.ListLength("Images"); i++)
+                {
+                    string[] veri = bag.ListGetByIndex("Images", i).ToString().Split(';');
+                    if (veri[0] == p.Tag.ToString()) bag.ListRemove("Images", veri[0] + ";" + veri[1]);
+                }
+                MessageBox.Show("İlanınız başarıyla kaldırıldı!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.InvokeOnClick(menu2_1, EventArgs.Empty);
+            }
+        }
         private void ilan_Click(object sender, EventArgs e)
         {
             Control c = (Control)sender;
@@ -160,6 +180,7 @@ namespace FreePet
             RedisValue rv = bag.HashGet("Advert", c.Tag.ToString());
             if (rv.HasValue)
             {
+                string[] kullaniciVerileri = bag.HashGet("Users", rv.ToString().Split(';')[8]).ToString().Split(';');
                 menu2_3_hayvanAdi.Text = rv.ToString().Split(';')[1];
                 menu2_3_hayvanTuru.Text = rv.ToString().Split(';')[2];
                 menu2_3_hayvanCinsi.Text = rv.ToString().Split(';')[3];
@@ -167,6 +188,10 @@ namespace FreePet
                 menu2_3_engelDurumu.Text = rv.ToString().Split(';')[5];
                 menu2_3_iletisim.Text = rv.ToString().Split(';')[6];
                 menu2_3_aciklama.Text = rv.ToString().Split(';')[7];
+                menu2_3_kullaniciAdi.Text = "@" + rv.ToString().Split(';')[8];
+                menu2_3_kullaniciIsim.Text = kullaniciVerileri[0];
+                if (kullaniciVerileri[3] != "null")
+                    menu2_3_kullaniciFoto.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(kullaniciVerileri[3])));
 
                 galeri.Controls.Clear();
                 resimler.Clear();
@@ -184,7 +209,8 @@ namespace FreePet
                         pb.Size = new Size(galeri.Width - 25, galeri.Width - 25);
                         pb.BorderStyle = BorderStyle.FixedSingle;
                         pb.Cursor = Cursors.Hand;
-                        if (galeri.Controls.Count > 1) pb.Location = new Point(0, galeri.Controls[galeri.Controls.Count - 1].Location.Y + 10 + galeri.Width);
+                        pb.Click += buyult_Click;
+                        if (galeri.Controls.Count > 0) pb.Location = new Point(0, galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width);
                         else pb.Location = new Point(0, 10);
                         galeri.Controls.Add(pb);
                     }
@@ -198,18 +224,21 @@ namespace FreePet
             {
                 using (Image img = Image.FromStream(ms))
                 {
-                    int h = 180, w = 180;
-                    if (img.Width > img.Height)
-                        h = img.Height / (img.Width / 180);
-                    else if (img.Height > img.Width)
-                        w = img.Width / (img.Height / 180);
-
-                    using (Bitmap b = new Bitmap(img, new Size(w, h)))
+                    if (img.Width > 500 || img.Height > 500)
                     {
-                        using (MemoryStream ms2 = new MemoryStream())
+                        float h = 500, w = 500;
+                        if (img.Width > img.Height)
+                            h = img.Height / (img.Width / 500f);
+                        else if (img.Height > img.Width)
+                            w = img.Width / (img.Height / 500f);
+
+                        using (Bitmap b = new Bitmap(img, new Size((int)w, (int)h)))
                         {
-                            b.Save(ms2, System.Drawing.Imaging.ImageFormat.Jpeg);
-                            imageBytes = ms2.ToArray();
+                            using (MemoryStream ms2 = new MemoryStream())
+                            {
+                                b.Save(ms2, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                imageBytes = ms2.ToArray();
+                            }
                         }
                     }
                 }
@@ -234,6 +263,7 @@ namespace FreePet
                     il.ID = "#" + ilanlar[i].Name;
                     il.ilanBaslik.Tag = ilanlar[i].Name;
                     il.ilanFoto.Tag = ilanlar[i].Name;
+                    il.sil.Tag = ilanlar[i].Name;
                     il.Baslik = veri[0];
                     il.Isim = veri[1];
                     il.Tur = veri[2];
@@ -243,7 +273,9 @@ namespace FreePet
                     il.Cinsiyet = "Belirsiz";
                     il.Konum = "Belirsiz";
                     il.Name = ilanlar[i].Name;
+                    if (veri[8] == Genel.kad) il.sil.Visible = true;
                     il.Proje_Click(new EventHandler(ilan_Click));
+                    il.sil_Click(new EventHandler(sil_Click));
                     if (ilanResimleri.ContainsKey(ilanlar[i].Name)) il.Fotograf = ilanResimleri[ilanlar[i].Name];
                     il.Width = menu4_icerik.Width - 40;
                     if (menu4_icerik.Controls.Count > 0)
@@ -309,6 +341,12 @@ namespace FreePet
             }
             if (galeri.Controls.Count < 1) galeri.Visible = false;
         }
+        private void buyult_Click(object sender, EventArgs e)
+        {
+            PictureBox pb = (PictureBox)sender;
+            if (pb.Dock != DockStyle.Fill) { galeri.AutoScroll = false; galeri.Dock = DockStyle.Fill; galeri.BringToFront(); pb.Dock = DockStyle.Fill; pb.BringToFront(); }
+            else { galeri.AutoScroll = true; galeri.Dock = DockStyle.Right; menu2_3_Panel.BringToFront(); pb.Dock = DockStyle.None; }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -342,8 +380,6 @@ namespace FreePet
           
         }
 
-        static readonly ConnectionMultiplexer muxer = ConnectionMultiplexer.Connect("185.255.93.52:6379,password=");
-        IDatabase bag = muxer.GetDatabase();
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (ilanBaslik.Text != "" && hayvanAdi.Text != "" && 
@@ -358,12 +394,13 @@ namespace FreePet
                     foreach (var item in resimler.Values)
                     {
                         byte[] imageArray = System.IO.File.ReadAllBytes(item.ToString());
-                        bag.ListInsertAfter("Images", bag.ListGetByIndex("Images", bag.ListLength("Images") - 1), id + ";" + Convert.ToBase64String(test(imageArray)));
+                        int r = int.Parse(bag.ListLength("Images").ToString());
+                        bag.ListLeftPush("Images", id + ";" + Convert.ToBase64String(test(imageArray)));
                     }
                     bag.HashSet("Advert", id, ilanBaslik.Text + ";" + hayvanAdi.Text + ";"
                         + hayvanTuru.Text + ";" + hayvanCinsi.Text + ";" + hayvanYasi.Value + " " + hayvanYasi2.Text + ";"
                         + (engelDurumu.Checked ? "Yok" : "Var") + ";" + (iletisimBilgisi.Checked ? "Evet" : "Hayır") + ";"
-                        + ilanAciklama.Text);
+                        + ilanAciklama.Text + ";" + Genel.kad);
                     MessageBox.Show("İlanınız başarıyla oluşturuldu!");
                     ilanBaslik.Clear();
                     hayvanAdi.Clear();
@@ -418,5 +455,22 @@ namespace FreePet
             ilan_sayfa.SelectAll();
         }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "All files (*.*)|*.*";
+            ofd.RestoreDirectory = true;
+            ofd.Title = "Fotoğrafları Seç";
+            ofd.Multiselect = false;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                RedisValue rv = bag.HashGet("Users", Genel.kad);
+                string oldPic = rv.ToString().Split(';')[3];
+                byte[] imageArray = System.IO.File.ReadAllBytes(ofd.FileName);
+                string newPic = rv.ToString().Replace(oldPic, Convert.ToBase64String(test(imageArray)));
+                pictureBox4.Image = Image.FromStream(new MemoryStream(test(imageArray)));
+                bag.HashSet("Users", Genel.kad, newPic);
+            }
+        }
     }
 }

@@ -207,6 +207,7 @@ namespace FreePet
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.k_sifretekrar);
             this.panel2.Controls.Add(this.k_adsoyad);

@@ -79,5 +79,9 @@ namespace FreePet
             ilanFoto.Click += handler;
             ilanBaslik.Click += handler;
         }
+        public void sil_Click(EventHandler handler)
+        {
+            sil.Click += handler;
+        }
     }
 }
