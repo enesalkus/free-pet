@@ -471,5 +471,10 @@ namespace FreePet
                 bag.HashSet("Users", Genel.kad, newPic);
             }
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
     }
 }

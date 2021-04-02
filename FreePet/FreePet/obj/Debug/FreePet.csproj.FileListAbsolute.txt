@@ -136,3 +136,4 @@ C:\Users\engin_altun\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.
 C:\Users\engin_altun\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csproj.CopyComplete
 C:\Users\engin_altun\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.exe
 C:\Users\engin_altun\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.pdb
+C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.ilan.resources
