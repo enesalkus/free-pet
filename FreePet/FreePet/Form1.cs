@@ -31,6 +31,8 @@ namespace FreePet
             panel2.Visible = false;
         }
 
+
+
         void kayitGetir()
         {
             panel2.Dock = DockStyle.Fill;
@@ -38,6 +40,7 @@ namespace FreePet
             panel2.Visible = true;
             panel1.Visible = false;
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             girisGetir();
