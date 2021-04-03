@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+//bilgilerin bulndugu alan
 namespace FreePet
 {
     class Genel
