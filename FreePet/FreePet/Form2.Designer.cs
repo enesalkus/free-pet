@@ -76,7 +76,6 @@ namespace FreePet
             this.ilan_sayfaIleri = new System.Windows.Forms.Button();
             this.menu4_icerik = new System.Windows.Forms.Panel();
             this.menu5_Panel = new System.Windows.Forms.Panel();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menu2_1 = new System.Windows.Forms.PictureBox();
             this.menu2_2 = new System.Windows.Forms.PictureBox();
             this.menu2_3_Panel = new System.Windows.Forms.Panel();
@@ -717,25 +716,14 @@ namespace FreePet
             // menu5_Panel
             // 
             this.menu5_Panel.Controls.Add(this.menu5_icerik);
-            this.menu5_Panel.Controls.Add(this.webBrowser1);
+            this.menu5_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menu5_Panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu5_Panel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.menu5_Panel.Location = new System.Drawing.Point(376, 373);
+            this.menu5_Panel.Location = new System.Drawing.Point(200, 48);
             this.menu5_Panel.Name = "menu5_Panel";
-            this.menu5_Panel.Size = new System.Drawing.Size(150, 150);
+            this.menu5_Panel.Size = new System.Drawing.Size(626, 582);
             this.menu5_Panel.TabIndex = 10;
             this.menu5_Panel.Visible = false;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(11, 100);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(130, 240);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri(resources.GetString("webBrowser1.Url"), System.UriKind.Absolute);
             // 
             // menu2_1
             // 
@@ -1040,10 +1028,10 @@ namespace FreePet
             // 
             // menu5_icerik
             // 
-            this.menu5_icerik.BackColor = System.Drawing.Color.Black;
-            this.menu5_icerik.Location = new System.Drawing.Point(38, 27);
+            this.menu5_icerik.BackColor = System.Drawing.Color.Transparent;
+            this.menu5_icerik.Location = new System.Drawing.Point(38, 28);
             this.menu5_icerik.Name = "menu5_icerik";
-            this.menu5_icerik.Size = new System.Drawing.Size(543, 108);
+            this.menu5_icerik.Size = new System.Drawing.Size(700, 160);
             this.menu5_icerik.TabIndex = 1;
             // 
             // Form2
@@ -1163,7 +1151,6 @@ namespace FreePet
         private System.Windows.Forms.Panel menu4_Panel;
         protected System.Windows.Forms.PictureBox menu2_2;
         private System.Windows.Forms.Label menu2_3_ilanID;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Panel menu5_icerik;
     }
 }

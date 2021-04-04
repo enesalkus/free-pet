@@ -38,9 +38,14 @@ namespace FreePet
             set { klnktel1.Text = value; }
         }
 
-        private void acilvet_Load(object sender, EventArgs e)
+        private void klnkadres1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+            panel1.Dock = DockStyle.Fill;
+            pictureBox1.Visible = false;
+            webBrowser1.Visible = true;     
+            webBrowser1.Dock = DockStyle.Fill;
+            
         }
     }
 }

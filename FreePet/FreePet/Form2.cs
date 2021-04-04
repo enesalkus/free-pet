@@ -475,13 +475,13 @@ namespace FreePet
                 bag.HashSet("Users", Genel.kad, newPic);
             }
         }
-        HashEntry[] vets; int topvet=3;
+        HashEntry[] vets; int topvet=1;
          void acilvet(int vet)
         {
             RedisValue rv = bag.HashGet("Vets", vets.Length);
             for (int i = 0; i < topvet; i++)
             {
-
+                
                 acilvet vt = new acilvet();
                 string[] veri = vets[i].Value.ToString().Split(';');
                 vt.Klinikad = veri[0];

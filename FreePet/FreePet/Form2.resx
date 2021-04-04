@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="webBrowser1.Url" xml:space="preserve">
-    <value>https://www.google.com/maps/place/D%C3%9CZCE+EGE+VETER%C4%B0NER+KL%C4%B0N%C4%B0%C4%9E%C4%B0/@40.8393,31.1474193,17z/data=!3m1!4b1!4m5!3m4!1s0x409d758f3759389f:0x9ded5d81aba6aa4c!8m2!3d40.8393!4d31.149608?hl=tr</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="menu2_1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
