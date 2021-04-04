@@ -456,7 +456,13 @@ namespace FreePet
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "All files (*.*)|*.*";
+            ofd.RestoreDirectory = true;
+            ofd.Title = "Fotoğrafları Seç";
+            ofd.Multiselect = false;
+            if (ofd.ShowDialog() == DialogResult.OK)
+
             {
                 RedisValue rv = bag.HashGet("Users", Genel.kad);
                 string oldPic = rv.ToString().Split(';')[3];
