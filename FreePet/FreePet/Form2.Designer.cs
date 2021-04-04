@@ -76,14 +76,6 @@ namespace FreePet
             this.ilan_sayfaIleri = new System.Windows.Forms.Button();
             this.menu4_icerik = new System.Windows.Forms.Panel();
             this.menu5_Panel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menu2_1 = new System.Windows.Forms.PictureBox();
             this.menu2_2 = new System.Windows.Forms.PictureBox();
@@ -110,6 +102,7 @@ namespace FreePet
             this.label9 = new System.Windows.Forms.Label();
             this.menu2_Panel = new System.Windows.Forms.Panel();
             this.menu4_Panel = new System.Windows.Forms.Panel();
+            this.menu5_icerik = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_3_kullaniciFoto)).BeginInit();
@@ -119,7 +112,6 @@ namespace FreePet
             this.menu2_1_Panel.SuspendLayout();
             this.ilan_altPanel.SuspendLayout();
             this.menu5_Panel.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_2)).BeginInit();
             this.menu2_3_Panel.SuspendLayout();
@@ -350,9 +342,9 @@ namespace FreePet
             this.menu2_2_Panel.Controls.Add(this.hayvanAdi);
             this.menu2_2_Panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu2_2_Panel.ForeColor = System.Drawing.Color.White;
-            this.menu2_2_Panel.Location = new System.Drawing.Point(347, 289);
+            this.menu2_2_Panel.Location = new System.Drawing.Point(211, 213);
             this.menu2_2_Panel.Name = "menu2_2_Panel";
-            this.menu2_2_Panel.Size = new System.Drawing.Size(127, 151);
+            this.menu2_2_Panel.Size = new System.Drawing.Size(150, 150);
             this.menu2_2_Panel.TabIndex = 4;
             this.menu2_2_Panel.Tag = "menu2_2_Panel";
             this.menu2_2_Panel.Visible = false;
@@ -362,7 +354,7 @@ namespace FreePet
             this.engelDurumu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.engelDurumu.AutoSize = true;
             this.engelDurumu.Checked = true;
-            this.engelDurumu.Location = new System.Drawing.Point(-81, 267);
+            this.engelDurumu.Location = new System.Drawing.Point(-70, 267);
             this.engelDurumu.Name = "engelDurumu";
             this.engelDurumu.Size = new System.Drawing.Size(55, 24);
             this.engelDurumu.TabIndex = 10;
@@ -374,7 +366,7 @@ namespace FreePet
             // 
             this.engelDurumu2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.engelDurumu2.AutoSize = true;
-            this.engelDurumu2.Location = new System.Drawing.Point(-18, 267);
+            this.engelDurumu2.Location = new System.Drawing.Point(-7, 267);
             this.engelDurumu2.Name = "engelDurumu2";
             this.engelDurumu2.Size = new System.Drawing.Size(52, 24);
             this.engelDurumu2.TabIndex = 10;
@@ -388,7 +380,7 @@ namespace FreePet
             this.iletisimBilgisi.Checked = true;
             this.iletisimBilgisi.CheckState = System.Windows.Forms.CheckState.Checked;
             this.iletisimBilgisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.iletisimBilgisi.Location = new System.Drawing.Point(-81, 312);
+            this.iletisimBilgisi.Location = new System.Drawing.Point(-70, 312);
             this.iletisimBilgisi.Name = "iletisimBilgisi";
             this.iletisimBilgisi.Size = new System.Drawing.Size(188, 22);
             this.iletisimBilgisi.TabIndex = 8;
@@ -399,7 +391,7 @@ namespace FreePet
             // 
             this.hayvanYasi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.hayvanYasi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.hayvanYasi.Location = new System.Drawing.Point(-81, 230);
+            this.hayvanYasi.Location = new System.Drawing.Point(-70, 230);
             this.hayvanYasi.Minimum = new decimal(new int[] {
             1,
             0,
@@ -422,7 +414,7 @@ namespace FreePet
             this.fotoYukle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fotoYukle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.fotoYukle.ForeColor = System.Drawing.Color.White;
-            this.fotoYukle.Location = new System.Drawing.Point(166, 473);
+            this.fotoYukle.Location = new System.Drawing.Point(177, 473);
             this.fotoYukle.Name = "fotoYukle";
             this.fotoYukle.Size = new System.Drawing.Size(164, 40);
             this.fotoYukle.TabIndex = 1;
@@ -437,7 +429,7 @@ namespace FreePet
             this.ilanOlustur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ilanOlustur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ilanOlustur.ForeColor = System.Drawing.Color.White;
-            this.ilanOlustur.Location = new System.Drawing.Point(-164, 473);
+            this.ilanOlustur.Location = new System.Drawing.Point(-153, 473);
             this.ilanOlustur.Name = "ilanOlustur";
             this.ilanOlustur.Size = new System.Drawing.Size(190, 40);
             this.ilanOlustur.TabIndex = 1;
@@ -456,7 +448,7 @@ namespace FreePet
             "Haftalık",
             "Aylık",
             "Yaşında"});
-            this.hayvanYasi2.Location = new System.Drawing.Point(-19, 229);
+            this.hayvanYasi2.Location = new System.Drawing.Point(-8, 229);
             this.hayvanYasi2.Name = "hayvanYasi2";
             this.hayvanYasi2.Size = new System.Drawing.Size(78, 26);
             this.hayvanYasi2.TabIndex = 5;
@@ -475,7 +467,7 @@ namespace FreePet
             "Tavşan",
             "Balık",
             "Diğer"});
-            this.hayvanTuru.Location = new System.Drawing.Point(-81, 143);
+            this.hayvanTuru.Location = new System.Drawing.Point(-70, 143);
             this.hayvanTuru.Name = "hayvanTuru";
             this.hayvanTuru.Size = new System.Drawing.Size(150, 26);
             this.hayvanTuru.TabIndex = 5;
@@ -485,7 +477,7 @@ namespace FreePet
             // 
             this.ilanAciklama.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ilanAciklama.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ilanAciklama.Location = new System.Drawing.Point(-164, 349);
+            this.ilanAciklama.Location = new System.Drawing.Point(-153, 349);
             this.ilanAciklama.Name = "ilanAciklama";
             this.ilanAciklama.Size = new System.Drawing.Size(494, 118);
             this.ilanAciklama.TabIndex = 2;
@@ -495,7 +487,7 @@ namespace FreePet
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(-214, 75);
+            this.label4.Location = new System.Drawing.Point(-203, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 20);
             this.label4.TabIndex = 1;
@@ -505,7 +497,7 @@ namespace FreePet
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(-220, 269);
+            this.label8.Location = new System.Drawing.Point(-209, 269);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 20);
             this.label8.TabIndex = 1;
@@ -515,7 +507,7 @@ namespace FreePet
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(-214, 232);
+            this.label7.Location = new System.Drawing.Point(-203, 232);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 20);
             this.label7.TabIndex = 1;
@@ -525,7 +517,7 @@ namespace FreePet
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(-214, 188);
+            this.label6.Location = new System.Drawing.Point(-203, 188);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 20);
             this.label6.TabIndex = 1;
@@ -534,7 +526,7 @@ namespace FreePet
             // hayvanTuru2
             // 
             this.hayvanTuru2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.hayvanTuru2.Location = new System.Drawing.Point(75, 143);
+            this.hayvanTuru2.Location = new System.Drawing.Point(86, 143);
             this.hayvanTuru2.Name = "hayvanTuru2";
             this.hayvanTuru2.Size = new System.Drawing.Size(104, 26);
             this.hayvanTuru2.TabIndex = 0;
@@ -543,7 +535,7 @@ namespace FreePet
             // hayvanCinsi
             // 
             this.hayvanCinsi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.hayvanCinsi.Location = new System.Drawing.Point(-81, 185);
+            this.hayvanCinsi.Location = new System.Drawing.Point(-70, 185);
             this.hayvanCinsi.Name = "hayvanCinsi";
             this.hayvanCinsi.Size = new System.Drawing.Size(260, 26);
             this.hayvanCinsi.TabIndex = 0;
@@ -552,7 +544,7 @@ namespace FreePet
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-214, 148);
+            this.label5.Location = new System.Drawing.Point(-203, 148);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 20);
             this.label5.TabIndex = 1;
@@ -562,7 +554,7 @@ namespace FreePet
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-214, 111);
+            this.label1.Location = new System.Drawing.Point(-203, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 1;
@@ -571,7 +563,7 @@ namespace FreePet
             // ilanBaslik
             // 
             this.ilanBaslik.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ilanBaslik.Location = new System.Drawing.Point(-81, 69);
+            this.ilanBaslik.Location = new System.Drawing.Point(-70, 69);
             this.ilanBaslik.Name = "ilanBaslik";
             this.ilanBaslik.Size = new System.Drawing.Size(260, 26);
             this.ilanBaslik.TabIndex = 0;
@@ -579,7 +571,7 @@ namespace FreePet
             // hayvanAdi
             // 
             this.hayvanAdi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.hayvanAdi.Location = new System.Drawing.Point(-81, 105);
+            this.hayvanAdi.Location = new System.Drawing.Point(-70, 105);
             this.hayvanAdi.Name = "hayvanAdi";
             this.hayvanAdi.Size = new System.Drawing.Size(260, 26);
             this.hayvanAdi.TabIndex = 0;
@@ -596,16 +588,16 @@ namespace FreePet
             // 
             // menu1_Panel
             // 
-            this.menu1_Panel.Location = new System.Drawing.Point(248, 53);
+            this.menu1_Panel.Location = new System.Drawing.Point(211, 54);
             this.menu1_Panel.Name = "menu1_Panel";
-            this.menu1_Panel.Size = new System.Drawing.Size(51, 59);
+            this.menu1_Panel.Size = new System.Drawing.Size(150, 150);
             this.menu1_Panel.TabIndex = 10;
             // 
             // menu3_Panel
             // 
-            this.menu3_Panel.Location = new System.Drawing.Point(398, 53);
+            this.menu3_Panel.Location = new System.Drawing.Point(537, 214);
             this.menu3_Panel.Name = "menu3_Panel";
-            this.menu3_Panel.Size = new System.Drawing.Size(68, 64);
+            this.menu3_Panel.Size = new System.Drawing.Size(150, 150);
             this.menu3_Panel.TabIndex = 10;
             this.menu3_Panel.Visible = false;
             // 
@@ -615,9 +607,9 @@ namespace FreePet
             this.menu2_1_Panel.Controls.Add(this.label24);
             this.menu2_1_Panel.Controls.Add(this.ilan_altPanel);
             this.menu2_1_Panel.Controls.Add(this.menu4_icerik);
-            this.menu2_1_Panel.Location = new System.Drawing.Point(516, 472);
+            this.menu2_1_Panel.Location = new System.Drawing.Point(537, 54);
             this.menu2_1_Panel.Name = "menu2_1_Panel";
-            this.menu2_1_Panel.Size = new System.Drawing.Size(295, 132);
+            this.menu2_1_Panel.Size = new System.Drawing.Size(150, 150);
             this.menu2_1_Panel.TabIndex = 10;
             this.menu2_1_Panel.Tag = "menu2_1_Panel";
             this.menu2_1_Panel.Visible = false;
@@ -630,7 +622,7 @@ namespace FreePet
             this.label24.ForeColor = System.Drawing.Color.Gainsboro;
             this.label24.Location = new System.Drawing.Point(7, 11);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(215, 32);
+            this.label24.Size = new System.Drawing.Size(70, 32);
             this.label24.TabIndex = 0;
             this.label24.Text = "Filtreleme Bölümü :";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -646,7 +638,7 @@ namespace FreePet
             this.ilan_altPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ilan_altPanel.Location = new System.Drawing.Point(0, 123);
             this.ilan_altPanel.Name = "ilan_altPanel";
-            this.ilan_altPanel.Size = new System.Drawing.Size(278, 107);
+            this.ilan_altPanel.Size = new System.Drawing.Size(133, 107);
             this.ilan_altPanel.TabIndex = 2;
             this.ilan_altPanel.Visible = false;
             // 
@@ -657,7 +649,7 @@ namespace FreePet
             this.ilan_sayfa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ilan_sayfa.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ilan_sayfa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ilan_sayfa.Location = new System.Drawing.Point(114, 30);
+            this.ilan_sayfa.Location = new System.Drawing.Point(41, 30);
             this.ilan_sayfa.MaxLength = 3;
             this.ilan_sayfa.Name = "ilan_sayfa";
             this.ilan_sayfa.Size = new System.Drawing.Size(46, 24);
@@ -675,7 +667,7 @@ namespace FreePet
             this.ilan_sayfaBilgi.ForeColor = System.Drawing.Color.DarkGray;
             this.ilan_sayfaBilgi.Location = new System.Drawing.Point(6, 66);
             this.ilan_sayfaBilgi.Name = "ilan_sayfaBilgi";
-            this.ilan_sayfaBilgi.Size = new System.Drawing.Size(266, 18);
+            this.ilan_sayfaBilgi.Size = new System.Drawing.Size(121, 18);
             this.ilan_sayfaBilgi.TabIndex = 0;
             this.ilan_sayfaBilgi.Text = "Toplam 0 sayfa içerisinde 0. sayfayı görmektesiniz.";
             this.ilan_sayfaBilgi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -688,7 +680,7 @@ namespace FreePet
             this.ilan_sayfaGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ilan_sayfaGeri.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ilan_sayfaGeri.ForeColor = System.Drawing.Color.White;
-            this.ilan_sayfaGeri.Location = new System.Drawing.Point(68, 23);
+            this.ilan_sayfaGeri.Location = new System.Drawing.Point(-5, 23);
             this.ilan_sayfaGeri.Name = "ilan_sayfaGeri";
             this.ilan_sayfaGeri.Size = new System.Drawing.Size(40, 40);
             this.ilan_sayfaGeri.TabIndex = 0;
@@ -704,7 +696,7 @@ namespace FreePet
             this.ilan_sayfaIleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ilan_sayfaIleri.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ilan_sayfaIleri.ForeColor = System.Drawing.Color.White;
-            this.ilan_sayfaIleri.Location = new System.Drawing.Point(166, 23);
+            this.ilan_sayfaIleri.Location = new System.Drawing.Point(93, 23);
             this.ilan_sayfaIleri.Name = "ilan_sayfaIleri";
             this.ilan_sayfaIleri.Size = new System.Drawing.Size(40, 40);
             this.ilan_sayfaIleri.TabIndex = 0;
@@ -719,125 +711,38 @@ namespace FreePet
             this.menu4_icerik.AutoSize = true;
             this.menu4_icerik.Location = new System.Drawing.Point(4, 52);
             this.menu4_icerik.Name = "menu4_icerik";
-            this.menu4_icerik.Size = new System.Drawing.Size(269, 71);
+            this.menu4_icerik.Size = new System.Drawing.Size(124, 71);
             this.menu4_icerik.TabIndex = 1;
             // 
             // menu5_Panel
             // 
-            this.menu5_Panel.Controls.Add(this.panel3);
-            this.menu5_Panel.Controls.Add(this.comboBox2);
-            this.menu5_Panel.Controls.Add(this.comboBox1);
-            this.menu5_Panel.Controls.Add(this.label16);
-            this.menu5_Panel.Controls.Add(this.label15);
+            this.menu5_Panel.Controls.Add(this.menu5_icerik);
             this.menu5_Panel.Controls.Add(this.webBrowser1);
             this.menu5_Panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu5_Panel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.menu5_Panel.Location = new System.Drawing.Point(621, 80);
+            this.menu5_Panel.Location = new System.Drawing.Point(376, 373);
             this.menu5_Panel.Name = "menu5_Panel";
-            this.menu5_Panel.Size = new System.Drawing.Size(68, 103);
+            this.menu5_Panel.Size = new System.Drawing.Size(150, 150);
             this.menu5_Panel.TabIndex = 10;
             this.menu5_Panel.Visible = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.linkLabel1);
-            this.panel3.Controls.Add(this.linkLabel3);
-            this.panel3.Controls.Add(this.linkLabel2);
-            this.panel3.Location = new System.Drawing.Point(17, 99);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(541, 151);
-            this.panel3.TabIndex = 4;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.linkLabel1.Location = new System.Drawing.Point(3, 24);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(474, 24);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "KİREMİTOCAĞI MAH. PALACI AHMET SOK. NO: 10/B ";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.linkLabel3.Location = new System.Drawing.Point(2, 100);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(498, 24);
-            this.linkLabel3.TabIndex = 3;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Burhaniye, Atatürk Bulv. No:6, 81010 Düzce Merkez/Düzce";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.linkLabel2.Location = new System.Drawing.Point(2, 60);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(522, 24);
-            this.linkLabel2.TabIndex = 3;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Şerefiye, Rasim Betir Paşa Blv. No:23/E, 81000 Merkez/Düzce";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Merkez"});
-            this.comboBox2.Location = new System.Drawing.Point(330, 41);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 32);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Düzce"});
-            this.comboBox1.Location = new System.Drawing.Point(112, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(275, 41);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 24);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "İlçe :";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(44, 41);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 24);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Şehir :";
             // 
             // webBrowser1
             // 
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(11, 51);
+            this.webBrowser1.Location = new System.Drawing.Point(11, 100);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(48, 265);
+            this.webBrowser1.Size = new System.Drawing.Size(130, 240);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri(resources.GetString("webBrowser1.Url"), System.UriKind.Absolute);
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // menu2_1
             // 
             this.menu2_1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.menu2_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menu2_1.Image = ((System.Drawing.Image)(resources.GetObject("menu2_1.Image")));
-            this.menu2_1.Location = new System.Drawing.Point(-206, 145);
+            this.menu2_1.Location = new System.Drawing.Point(-220, 145);
             this.menu2_1.Name = "menu2_1";
             this.menu2_1.Size = new System.Drawing.Size(292, 292);
             this.menu2_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -850,7 +755,7 @@ namespace FreePet
             this.menu2_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.menu2_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menu2_2.Image = ((System.Drawing.Image)(resources.GetObject("menu2_2.Image")));
-            this.menu2_2.Location = new System.Drawing.Point(92, 145);
+            this.menu2_2.Location = new System.Drawing.Point(78, 145);
             this.menu2_2.Name = "menu2_2";
             this.menu2_2.Size = new System.Drawing.Size(292, 292);
             this.menu2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -882,12 +787,11 @@ namespace FreePet
             this.menu2_3_Panel.Controls.Add(this.menu2_3_hayvanAdi);
             this.menu2_3_Panel.Controls.Add(this.menu2_3_ilanID);
             this.menu2_3_Panel.Controls.Add(this.label9);
-            this.menu2_3_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menu2_3_Panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menu2_3_Panel.ForeColor = System.Drawing.Color.White;
-            this.menu2_3_Panel.Location = new System.Drawing.Point(200, 48);
+            this.menu2_3_Panel.Location = new System.Drawing.Point(376, 213);
             this.menu2_3_Panel.Name = "menu2_3_Panel";
-            this.menu2_3_Panel.Size = new System.Drawing.Size(626, 582);
+            this.menu2_3_Panel.Size = new System.Drawing.Size(150, 150);
             this.menu2_3_Panel.TabIndex = 11;
             this.menu2_3_Panel.Tag = "menu2_3_Panel";
             this.menu2_3_Panel.Visible = false;
@@ -974,7 +878,7 @@ namespace FreePet
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(527, 34);
+            this.button1.Location = new System.Drawing.Point(487, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 40);
             this.button1.TabIndex = 1;
@@ -989,7 +893,7 @@ namespace FreePet
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(213, 530);
+            this.button2.Location = new System.Drawing.Point(193, 400);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 40);
             this.button2.TabIndex = 1;
@@ -1004,7 +908,7 @@ namespace FreePet
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(320, 530);
+            this.button3.Location = new System.Drawing.Point(300, 400);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 40);
             this.button3.TabIndex = 1;
@@ -1100,7 +1004,7 @@ namespace FreePet
             // 
             this.menu2_3_ilanID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.menu2_3_ilanID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.menu2_3_ilanID.Location = new System.Drawing.Point(474, 6);
+            this.menu2_3_ilanID.Location = new System.Drawing.Point(434, 6);
             this.menu2_3_ilanID.Name = "menu2_3_ilanID";
             this.menu2_3_ilanID.Size = new System.Drawing.Size(146, 25);
             this.menu2_3_ilanID.TabIndex = 0;
@@ -1121,18 +1025,26 @@ namespace FreePet
             // 
             this.menu2_Panel.Controls.Add(this.menu2_1);
             this.menu2_Panel.Controls.Add(this.menu2_2);
-            this.menu2_Panel.Location = new System.Drawing.Point(641, 289);
+            this.menu2_Panel.Location = new System.Drawing.Point(376, 54);
             this.menu2_Panel.Name = "menu2_Panel";
-            this.menu2_Panel.Size = new System.Drawing.Size(179, 173);
+            this.menu2_Panel.Size = new System.Drawing.Size(150, 150);
             this.menu2_Panel.TabIndex = 13;
             // 
             // menu4_Panel
             // 
-            this.menu4_Panel.Location = new System.Drawing.Point(472, 54);
+            this.menu4_Panel.Location = new System.Drawing.Point(211, 373);
             this.menu4_Panel.Name = "menu4_Panel";
-            this.menu4_Panel.Size = new System.Drawing.Size(68, 64);
+            this.menu4_Panel.Size = new System.Drawing.Size(150, 150);
             this.menu4_Panel.TabIndex = 10;
             this.menu4_Panel.Visible = false;
+            // 
+            // menu5_icerik
+            // 
+            this.menu5_icerik.BackColor = System.Drawing.Color.Black;
+            this.menu5_icerik.Location = new System.Drawing.Point(38, 27);
+            this.menu5_icerik.Name = "menu5_icerik";
+            this.menu5_icerik.Size = new System.Drawing.Size(543, 108);
+            this.menu5_icerik.TabIndex = 1;
             // 
             // Form2
             // 
@@ -1140,9 +1052,9 @@ namespace FreePet
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(1040, 630);
-            this.Controls.Add(this.menu2_3_Panel);
             this.Controls.Add(this.menu5_Panel);
             this.Controls.Add(this.menu2_1_Panel);
+            this.Controls.Add(this.menu2_3_Panel);
             this.Controls.Add(this.menu2_2_Panel);
             this.Controls.Add(this.menu2_Panel);
             this.Controls.Add(this.menu4_Panel);
@@ -1170,9 +1082,6 @@ namespace FreePet
             this.ilan_altPanel.ResumeLayout(false);
             this.ilan_altPanel.PerformLayout();
             this.menu5_Panel.ResumeLayout(false);
-            this.menu5_Panel.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_2)).EndInit();
             this.menu2_3_Panel.ResumeLayout(false);
@@ -1254,14 +1163,7 @@ namespace FreePet
         private System.Windows.Forms.Panel menu4_Panel;
         protected System.Windows.Forms.PictureBox menu2_2;
         private System.Windows.Forms.Label menu2_3_ilanID;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.Panel menu5_icerik;
     }
 }

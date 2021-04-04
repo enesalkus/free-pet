@@ -143,7 +143,10 @@ namespace FreePet
 
         private void menu5_Click(object sender, EventArgs e)
         {
+            menu5_icerik.Controls.Clear();
             sayfaDegistir(menu5);
+            vets = bag.HashGetAll("Vets");
+            acilvet(1);
         }
 
         private void menu6_Click(object sender, EventArgs e)
@@ -472,10 +475,21 @@ namespace FreePet
                 bag.HashSet("Users", Genel.kad, newPic);
             }
         }
-
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        HashEntry[] vets; int topvet=3;
+         void acilvet(int vet)
         {
+            RedisValue rv = bag.HashGet("Vets", vets.Length);
+            for (int i = 0; i < topvet; i++)
+            {
 
+                acilvet vt = new acilvet();
+                string[] veri = vets[i].Value.ToString().Split(';');
+                vt.Klinikad = veri[0];
+                vt.Sahip = veri[1];
+                vt.Adres = veri[2];
+                vt.Telefon = veri[3];
+                menu5_icerik.Controls.Add(vt);
+            }
         }
     }
 }
