@@ -143,10 +143,33 @@ namespace FreePet
 
         private void menu5_Click(object sender, EventArgs e)
         {
-            menu5_icerik.Controls.Clear();
             sayfaDegistir(menu5);
+            vet_sayfa.Text = "1";
+            menu5_icerik.Controls.Clear();
+            vetfoto.Clear();
+            vetAltpanel.Visible = false;
+            #region Yükleniyor
+            Label lbl = new Label();
+            lbl.Text = "Yükleniyor..";
+            lbl.Size = new Size(menu4_icerik.Width - 10, 32);
+            lbl.Location = new Point(5, 245);
+            lbl.AutoSize = false;
+            lbl.TextAlign = ContentAlignment.MiddleCenter;
+            lbl.ForeColor = Color.Silver;
+            lbl.Font = new Font("Microsoft Sans Serif", 12);
+            menu4_icerik.Controls.Add(lbl);
+            #endregion
+            for (int i = 0; i < bag.ListLength("VetImage"); i++)
+            {
+                string[] veri = bag.ListGetByIndex("VetImage", i).ToString().Split(';');
+                if (!vetfoto.ContainsKey(veri[0]))
+                    vetfoto.Add(veri[0], Image.FromStream(new MemoryStream(Convert.FromBase64String(veri[1]))));
+            }
+
+            menu5_icerik.Controls.Clear();
             vets = bag.HashGetAll("Vets");
             acilvet(1);
+            vetAltpanel.Visible = true;
         }
 
         private void menu6_Click(object sender, EventArgs e)
@@ -220,41 +243,12 @@ namespace FreePet
                 }
             }
         }
-
-        public byte[] test(byte[] imageBytes)
-        {
-            using (MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length))
-            {
-                using (Image img = Image.FromStream(ms))
-                {
-                    if (img.Width > 500 || img.Height > 500)
-                    {
-                        float h = 500, w = 500;
-                        if (img.Width > img.Height)
-                            h = img.Height / (img.Width / 500f);
-                        else if (img.Height > img.Width)
-                            w = img.Width / (img.Height / 500f);
-
-                        using (Bitmap b = new Bitmap(img, new Size((int)w, (int)h)))
-                        {
-                            using (MemoryStream ms2 = new MemoryStream())
-                            {
-                                b.Save(ms2, System.Drawing.Imaging.ImageFormat.Jpeg);
-                                imageBytes = ms2.ToArray();
-                            }
-                        }
-                    }
-                }
-            }
-            return imageBytes;
-        }
-
         Dictionary<string, Image> ilanResimleri = new Dictionary<string, Image>();
         HashEntry[] ilanlar; int maxIlan = 5;
         void ilanListele(int syf)
         {
             menu4_icerik.Controls.Clear();
-            
+
             ilan_sayfaBilgi.Text = "Toplam " + Math.Ceiling(decimal.Parse("" + (ilanlar.Length / (float)maxIlan))) + " sayfa içerisinde " + syf + ". sayfayı görmektesiniz.";
             int sayfa = (syf * maxIlan);
             for (int i = sayfa - maxIlan; i < ilanlar.Length; i++)
@@ -288,6 +282,35 @@ namespace FreePet
                 }
             }
         }
+        public byte[] test(byte[] imageBytes)
+        {
+            using (MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length))
+            {
+                using (Image img = Image.FromStream(ms))
+                {
+                    if (img.Width > 500 || img.Height > 500)
+                    {
+                        float h = 500, w = 500;
+                        if (img.Width > img.Height)
+                            h = img.Height / (img.Width / 500f);
+                        else if (img.Height > img.Width)
+                            w = img.Width / (img.Height / 500f);
+
+                        using (Bitmap b = new Bitmap(img, new Size((int)w, (int)h)))
+                        {
+                            using (MemoryStream ms2 = new MemoryStream())
+                            {
+                                b.Save(ms2, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                imageBytes = ms2.ToArray();
+                            }
+                        }
+                    }
+                }
+            }
+            return imageBytes;
+        }
+
+       
 
         private void ilan_sayfaIleri_Click(object sender, EventArgs e)
         {
@@ -428,7 +451,6 @@ namespace FreePet
         {
 
         }
-        // KVP HOUSE EKIBINDEN SELAMLAR :)
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -475,20 +497,56 @@ namespace FreePet
                 bag.HashSet("Users", Genel.kad, newPic);
             }
         }
-        HashEntry[] vets; int topvet=1;
+        Dictionary<string, Image> vetfoto = new Dictionary<string, Image>();
+        HashEntry[] vets;int toplamvet=5;
          void acilvet(int vet)
         {
-            RedisValue rv = bag.HashGet("Vets", vets.Length);
-            for (int i = 0; i < topvet; i++)
+            menu5_icerik.Controls.Clear();
+            vetSayfaBilgi.Text = "Toplam " + Math.Ceiling(decimal.Parse("" + (vets.Length / (float)toplamvet))) + " sayfa içerisinde " + vet + ". sayfayı görmektesiniz.";
+            int sayfa = (vet * toplamvet);
+            for (int i = sayfa - toplamvet; i < vets.Length; i++)
             {
-                
-                acilvet vt = new acilvet();
-                string[] veri = vets[i].Value.ToString().Split(';');
-                vt.Klinikad = veri[0];
-                vt.Sahip = veri[1];
-                vt.Adres = veri[2];
-                vt.Telefon = veri[3];
-                menu5_icerik.Controls.Add(vt);
+                if (i < sayfa)
+                {
+                    acilvet vt = new acilvet();
+                    string[] veri = vets[i].Value.ToString().Split(';');
+                    vt.VETID = vets[i].Name;
+                    vt.Klinikad = veri[0];
+                    vt.Sahip = veri[1];
+                    vt.Adres = veri[2];
+                    vt.Telefon = veri[3];
+                    if (vetfoto.ContainsKey(vets[i].Name)) vt.Fotograf = vetfoto[vets[i].Name];
+                    vt.Width = menu5_icerik.Width-40;
+                    if (menu5_icerik.Controls.Count > 0)
+                        vt.Location = new Point(10, menu5_icerik.Controls[menu5_icerik.Controls.Count - 1].Location.Y + vt.Size.Height + 10);
+                    else vt.Location = new Point(10, 10);
+                    menu5_icerik.Controls.Add(vt);
+                }
+            }
+        }
+
+        private void vetSayfaGeri_Click(object sender, EventArgs e)
+        {
+            int sayfa = int.Parse(vet_sayfa.Text);
+            if (sayfa > 1)
+            {
+                sayfa--;
+                vet_sayfa.Text = sayfa.ToString();
+                ilanListele(sayfa);
+                menu5_Panel.VerticalScroll.Value = 0;
+            }
+        }
+
+        private void vetSayfaİleri_Click(object sender, EventArgs e)
+        {
+            int sayfa = int.Parse(vet_sayfa.Text);
+            float max = vets.Length / (float)toplamvet;
+            if (max > sayfa)
+            {
+                sayfa++;
+                vet_sayfa.Text = sayfa.ToString();
+                ilanListele(sayfa);
+                menu5_Panel.VerticalScroll.Value = 0;
             }
         }
     }

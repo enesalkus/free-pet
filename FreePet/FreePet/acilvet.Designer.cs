@@ -29,7 +29,6 @@ namespace FreePet
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(acilvet));
             this.klnkad = new System.Windows.Forms.Label();
             this.klnksahip = new System.Windows.Forms.Label();
             this.klnkadres = new System.Windows.Forms.Label();
@@ -38,11 +37,11 @@ namespace FreePet
             this.klnksahip1 = new System.Windows.Forms.Label();
             this.klnktel1 = new System.Windows.Forms.Label();
             this.vetNo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.vetfoto = new System.Windows.Forms.PictureBox();
             this.klnkadres1 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vetfoto)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,22 +122,22 @@ namespace FreePet
             // 
             this.vetNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.vetNo.ForeColor = System.Drawing.Color.Gray;
-            this.vetNo.Location = new System.Drawing.Point(622, -1);
+            this.vetNo.Location = new System.Drawing.Point(689, 0);
             this.vetNo.Name = "vetNo";
             this.vetNo.Size = new System.Drawing.Size(79, 24);
             this.vetNo.TabIndex = 3;
-            this.vetNo.Text = "000000";
+            this.vetNo.Text = "#000000";
             this.vetNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox1
+            // vetfoto
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 121);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.vetfoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vetfoto.Location = new System.Drawing.Point(0, 0);
+            this.vetfoto.Name = "vetfoto";
+            this.vetfoto.Size = new System.Drawing.Size(121, 121);
+            this.vetfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.vetfoto.TabIndex = 4;
+            this.vetfoto.TabStop = false;
             // 
             // klnkadres1
             // 
@@ -147,7 +146,7 @@ namespace FreePet
             this.klnkadres1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.klnkadres1.Location = new System.Drawing.Point(259, 120);
             this.klnkadres1.Name = "klnkadres1";
-            this.klnkadres1.Size = new System.Drawing.Size(420, 21);
+            this.klnkadres1.Size = new System.Drawing.Size(495, 21);
             this.klnkadres1.TabIndex = 5;
             this.klnkadres1.TabStop = true;
             this.klnkadres1.Text = "-";
@@ -155,7 +154,7 @@ namespace FreePet
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.vetfoto);
             this.panel1.Controls.Add(this.webBrowser1);
             this.panel1.Location = new System.Drawing.Point(16, 20);
             this.panel1.Name = "panel1";
@@ -190,10 +189,10 @@ namespace FreePet
             this.Controls.Add(this.klnkad);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "acilvet";
-            this.Size = new System.Drawing.Size(700, 160);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(771, 163);
+            ((System.ComponentModel.ISupportInitialize)(this.vetfoto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,7 +209,7 @@ namespace FreePet
         private System.Windows.Forms.Label klnksahip1;
         private System.Windows.Forms.Label klnktel1;
         private System.Windows.Forms.Label vetNo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox vetfoto;
         private System.Windows.Forms.LinkLabel klnkadres1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.WebBrowser webBrowser1;
