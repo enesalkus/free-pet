@@ -76,6 +76,8 @@ namespace FreePet
                     else MessageBox.Show("Şifreniz yanlış, lütfen tekrar deneyiniz.");
                 }
                 else MessageBox.Show("Böyle bir kullanıcı bulunamadı");
+                textBox1.Text = "Kullanıcı Adı";
+                textBox2.Text = "Şifre";
             }
             else MessageBox.Show("Lütfen tüm alanları doldurunuz.");
         }
@@ -94,7 +96,7 @@ namespace FreePet
         private void textBox1_Enter(object sender, EventArgs e)
         {
             TextBox t = (TextBox)sender;
-            t.ForeColor = Color.Black;
+            t.ForeColor = Color.Silver;
             if (t.Name == "textBox1" && t.Text == "Kullanıcı Adı") textBox1.Clear();
             else if (t.Name == "textBox2" && t.Text == "Şifre")
             {
@@ -210,6 +212,11 @@ namespace FreePet
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

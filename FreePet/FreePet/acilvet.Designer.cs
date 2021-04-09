@@ -48,40 +48,40 @@ namespace FreePet
             // klnkad
             // 
             this.klnkad.AutoSize = true;
-            this.klnkad.Location = new System.Drawing.Point(145, 20);
-            this.klnkad.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.klnkad.Location = new System.Drawing.Point(130, 19);
+            this.klnkad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.klnkad.Name = "klnkad";
-            this.klnkad.Size = new System.Drawing.Size(85, 21);
+            this.klnkad.Size = new System.Drawing.Size(80, 20);
             this.klnkad.TabIndex = 0;
             this.klnkad.Text = "Klinik Adı :";
             // 
             // klnksahip
             // 
             this.klnksahip.AutoSize = true;
-            this.klnksahip.Location = new System.Drawing.Point(145, 54);
-            this.klnksahip.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.klnksahip.Location = new System.Drawing.Point(130, 51);
+            this.klnksahip.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.klnksahip.Name = "klnksahip";
-            this.klnksahip.Size = new System.Drawing.Size(104, 21);
+            this.klnksahip.Size = new System.Drawing.Size(98, 20);
             this.klnksahip.TabIndex = 0;
             this.klnksahip.Text = "Klinik Sahibi :";
             // 
             // klnkadres
             // 
             this.klnkadres.AutoSize = true;
-            this.klnkadres.Location = new System.Drawing.Point(145, 120);
-            this.klnkadres.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.klnkadres.Location = new System.Drawing.Point(130, 114);
+            this.klnkadres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.klnkadres.Name = "klnkadres";
-            this.klnkadres.Size = new System.Drawing.Size(106, 21);
+            this.klnkadres.Size = new System.Drawing.Size(101, 20);
             this.klnkadres.TabIndex = 0;
             this.klnkadres.Text = "Klinik Adresi :";
             // 
             // klnktel
             // 
             this.klnktel.AutoSize = true;
-            this.klnktel.Location = new System.Drawing.Point(145, 88);
-            this.klnktel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.klnktel.Location = new System.Drawing.Point(130, 84);
+            this.klnktel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.klnktel.Name = "klnktel";
-            this.klnktel.Size = new System.Drawing.Size(112, 21);
+            this.klnktel.Size = new System.Drawing.Size(106, 20);
             this.klnktel.TabIndex = 0;
             this.klnktel.Text = "İletişim Bilgisi :";
             // 
@@ -89,10 +89,10 @@ namespace FreePet
             // 
             this.klnkad1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.klnkad1.ForeColor = System.Drawing.Color.Yellow;
-            this.klnkad1.Location = new System.Drawing.Point(259, 20);
-            this.klnkad1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.klnkad1.Location = new System.Drawing.Point(233, 19);
+            this.klnkad1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.klnkad1.Name = "klnkad1";
-            this.klnkad1.Size = new System.Drawing.Size(231, 21);
+            this.klnkad1.Size = new System.Drawing.Size(208, 20);
             this.klnkad1.TabIndex = 0;
             this.klnkad1.Text = "-";
             // 
@@ -100,10 +100,10 @@ namespace FreePet
             // 
             this.klnksahip1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.klnksahip1.ForeColor = System.Drawing.Color.Yellow;
-            this.klnksahip1.Location = new System.Drawing.Point(259, 54);
-            this.klnksahip1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.klnksahip1.Location = new System.Drawing.Point(233, 51);
+            this.klnksahip1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.klnksahip1.Name = "klnksahip1";
-            this.klnksahip1.Size = new System.Drawing.Size(231, 21);
+            this.klnksahip1.Size = new System.Drawing.Size(208, 20);
             this.klnksahip1.TabIndex = 0;
             this.klnksahip1.Text = "-";
             // 
@@ -111,10 +111,10 @@ namespace FreePet
             // 
             this.klnktel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.klnktel1.ForeColor = System.Drawing.Color.Yellow;
-            this.klnktel1.Location = new System.Drawing.Point(259, 88);
-            this.klnktel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.klnktel1.Location = new System.Drawing.Point(233, 84);
+            this.klnktel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.klnktel1.Name = "klnktel1";
-            this.klnktel1.Size = new System.Drawing.Size(231, 21);
+            this.klnktel1.Size = new System.Drawing.Size(208, 20);
             this.klnktel1.TabIndex = 0;
             this.klnktel1.Text = "-";
             // 
@@ -122,9 +122,9 @@ namespace FreePet
             // 
             this.vetNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.vetNo.ForeColor = System.Drawing.Color.Gray;
-            this.vetNo.Location = new System.Drawing.Point(689, 0);
+            this.vetNo.Location = new System.Drawing.Point(583, 0);
             this.vetNo.Name = "vetNo";
-            this.vetNo.Size = new System.Drawing.Size(79, 24);
+            this.vetNo.Size = new System.Drawing.Size(71, 23);
             this.vetNo.TabIndex = 3;
             this.vetNo.Text = "#000000";
             this.vetNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,7 +134,7 @@ namespace FreePet
             this.vetfoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vetfoto.Location = new System.Drawing.Point(0, 0);
             this.vetfoto.Name = "vetfoto";
-            this.vetfoto.Size = new System.Drawing.Size(121, 121);
+            this.vetfoto.Size = new System.Drawing.Size(109, 115);
             this.vetfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vetfoto.TabIndex = 4;
             this.vetfoto.TabStop = false;
@@ -144,9 +144,9 @@ namespace FreePet
             this.klnkadres1.ActiveLinkColor = System.Drawing.Color.Yellow;
             this.klnkadres1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.klnkadres1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.klnkadres1.Location = new System.Drawing.Point(259, 120);
+            this.klnkadres1.Location = new System.Drawing.Point(233, 114);
             this.klnkadres1.Name = "klnkadres1";
-            this.klnkadres1.Size = new System.Drawing.Size(495, 21);
+            this.klnkadres1.Size = new System.Drawing.Size(412, 20);
             this.klnkadres1.TabIndex = 5;
             this.klnkadres1.TabStop = true;
             this.klnkadres1.Text = "-";
@@ -156,24 +156,24 @@ namespace FreePet
             // 
             this.panel1.Controls.Add(this.vetfoto);
             this.panel1.Controls.Add(this.webBrowser1);
-            this.panel1.Location = new System.Drawing.Point(16, 20);
+            this.panel1.Location = new System.Drawing.Point(14, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(121, 121);
+            this.panel1.Size = new System.Drawing.Size(109, 115);
             this.panel1.TabIndex = 6;
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(60, 13);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Location = new System.Drawing.Point(54, 12);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(18, 19);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(58, 55);
+            this.webBrowser1.Size = new System.Drawing.Size(52, 52);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Url = new System.Uri("http://www.google.com", System.UriKind.Absolute);
             this.webBrowser1.Visible = false;
             // 
             // acilvet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -187,11 +187,11 @@ namespace FreePet
             this.Controls.Add(this.klnksahip1);
             this.Controls.Add(this.klnkad1);
             this.Controls.Add(this.klnkad);
-            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "acilvet";
-            this.Size = new System.Drawing.Size(771, 163);
+            this.Size = new System.Drawing.Size(657, 155);
             ((System.ComponentModel.ISupportInitialize)(this.vetfoto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

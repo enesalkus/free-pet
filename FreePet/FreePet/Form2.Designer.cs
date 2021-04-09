@@ -76,6 +76,13 @@ namespace FreePet
             this.ilan_sayfaIleri = new System.Windows.Forms.Button();
             this.menu4_icerik = new System.Windows.Forms.Panel();
             this.menu5_Panel = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.vetAltpanel = new System.Windows.Forms.Panel();
+            this.vet_sayfa = new System.Windows.Forms.TextBox();
+            this.vetSayfaBilgi = new System.Windows.Forms.Label();
+            this.vetSayfaGeri = new System.Windows.Forms.Button();
+            this.vetSayfaİleri = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.menu5_icerik = new System.Windows.Forms.Panel();
             this.menu2_1 = new System.Windows.Forms.PictureBox();
@@ -103,13 +110,6 @@ namespace FreePet
             this.label9 = new System.Windows.Forms.Label();
             this.menu2_Panel = new System.Windows.Forms.Panel();
             this.menu4_Panel = new System.Windows.Forms.Panel();
-            this.vetAltpanel = new System.Windows.Forms.Panel();
-            this.vet_sayfa = new System.Windows.Forms.TextBox();
-            this.vetSayfaBilgi = new System.Windows.Forms.Label();
-            this.vetSayfaGeri = new System.Windows.Forms.Button();
-            this.vetSayfaİleri = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_3_kullaniciFoto)).BeginInit();
@@ -119,11 +119,11 @@ namespace FreePet
             this.menu2_1_Panel.SuspendLayout();
             this.ilan_altPanel.SuspendLayout();
             this.menu5_Panel.SuspendLayout();
+            this.vetAltpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_2)).BeginInit();
             this.menu2_3_Panel.SuspendLayout();
             this.menu2_Panel.SuspendLayout();
-            this.vetAltpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu1
@@ -739,6 +739,105 @@ namespace FreePet
             this.menu5_Panel.TabIndex = 10;
             this.menu5_Panel.Visible = false;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "İlçe Seçiniz",
+            "Merkez"});
+            this.comboBox2.Location = new System.Drawing.Point(346, 11);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(231, 32);
+            this.comboBox2.TabIndex = 4;
+            this.comboBox2.Text = "İlçe Seçiniz";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Şehir Seçiniz",
+            "İstanbul",
+            "Ankara",
+            "İzmir"});
+            this.comboBox1.Location = new System.Drawing.Point(167, 11);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(156, 32);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.Text = "Şehir Seçiniz";
+            // 
+            // vetAltpanel
+            // 
+            this.vetAltpanel.Controls.Add(this.vet_sayfa);
+            this.vetAltpanel.Controls.Add(this.vetSayfaBilgi);
+            this.vetAltpanel.Controls.Add(this.vetSayfaGeri);
+            this.vetAltpanel.Controls.Add(this.vetSayfaİleri);
+            this.vetAltpanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.vetAltpanel.Location = new System.Drawing.Point(0, 123);
+            this.vetAltpanel.Name = "vetAltpanel";
+            this.vetAltpanel.Size = new System.Drawing.Size(577, 107);
+            this.vetAltpanel.TabIndex = 3;
+            this.vetAltpanel.Visible = false;
+            // 
+            // vet_sayfa
+            // 
+            this.vet_sayfa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.vet_sayfa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.vet_sayfa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vet_sayfa.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.vet_sayfa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.vet_sayfa.Location = new System.Drawing.Point(263, 30);
+            this.vet_sayfa.MaxLength = 3;
+            this.vet_sayfa.Name = "vet_sayfa";
+            this.vet_sayfa.Size = new System.Drawing.Size(46, 24);
+            this.vet_sayfa.TabIndex = 3;
+            this.vet_sayfa.Text = "1";
+            this.vet_sayfa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // vetSayfaBilgi
+            // 
+            this.vetSayfaBilgi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.vetSayfaBilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.vetSayfaBilgi.ForeColor = System.Drawing.Color.DarkGray;
+            this.vetSayfaBilgi.Location = new System.Drawing.Point(6, 66);
+            this.vetSayfaBilgi.Name = "vetSayfaBilgi";
+            this.vetSayfaBilgi.Size = new System.Drawing.Size(565, 18);
+            this.vetSayfaBilgi.TabIndex = 0;
+            this.vetSayfaBilgi.Text = "Toplam 0 sayfa içerisinde 0. sayfayı görmektesiniz.";
+            this.vetSayfaBilgi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // vetSayfaGeri
+            // 
+            this.vetSayfaGeri.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.vetSayfaGeri.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.vetSayfaGeri.FlatAppearance.BorderSize = 0;
+            this.vetSayfaGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vetSayfaGeri.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.vetSayfaGeri.ForeColor = System.Drawing.Color.White;
+            this.vetSayfaGeri.Location = new System.Drawing.Point(217, 23);
+            this.vetSayfaGeri.Name = "vetSayfaGeri";
+            this.vetSayfaGeri.Size = new System.Drawing.Size(40, 40);
+            this.vetSayfaGeri.TabIndex = 0;
+            this.vetSayfaGeri.Text = "<";
+            this.vetSayfaGeri.UseVisualStyleBackColor = true;
+            this.vetSayfaGeri.Click += new System.EventHandler(this.vetSayfaGeri_Click);
+            // 
+            // vetSayfaİleri
+            // 
+            this.vetSayfaİleri.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.vetSayfaİleri.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.vetSayfaİleri.FlatAppearance.BorderSize = 0;
+            this.vetSayfaİleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vetSayfaİleri.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.vetSayfaİleri.ForeColor = System.Drawing.Color.White;
+            this.vetSayfaİleri.Location = new System.Drawing.Point(315, 23);
+            this.vetSayfaİleri.Name = "vetSayfaİleri";
+            this.vetSayfaİleri.Size = new System.Drawing.Size(40, 40);
+            this.vetSayfaİleri.TabIndex = 0;
+            this.vetSayfaİleri.Text = ">";
+            this.vetSayfaİleri.UseVisualStyleBackColor = true;
+            this.vetSayfaİleri.Click += new System.EventHandler(this.vetSayfaİleri_Click);
+            // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -747,7 +846,7 @@ namespace FreePet
             this.label15.ForeColor = System.Drawing.Color.Gainsboro;
             this.label15.Location = new System.Drawing.Point(7, 11);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(114, 32);
+            this.label15.Size = new System.Drawing.Size(541, 32);
             this.label15.TabIndex = 2;
             this.label15.Text = "Filtreleme Bölümü :";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -760,7 +859,7 @@ namespace FreePet
             this.menu5_icerik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.menu5_icerik.Location = new System.Drawing.Point(4, 52);
             this.menu5_icerik.Name = "menu5_icerik";
-            this.menu5_icerik.Size = new System.Drawing.Size(475, 71);
+            this.menu5_icerik.Size = new System.Drawing.Size(124, 71);
             this.menu5_icerik.TabIndex = 1;
             // 
             // menu2_1
@@ -904,7 +1003,7 @@ namespace FreePet
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(2231, 34);
+            this.button1.Location = new System.Drawing.Point(2667, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 40);
             this.button1.TabIndex = 1;
@@ -919,7 +1018,7 @@ namespace FreePet
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1065, 1608);
+            this.button2.Location = new System.Drawing.Point(1283, 1910);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 40);
             this.button2.TabIndex = 1;
@@ -934,7 +1033,7 @@ namespace FreePet
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1172, 1608);
+            this.button3.Location = new System.Drawing.Point(1390, 1910);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 40);
             this.button3.TabIndex = 1;
@@ -1030,7 +1129,7 @@ namespace FreePet
             // 
             this.menu2_3_ilanID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.menu2_3_ilanID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.menu2_3_ilanID.Location = new System.Drawing.Point(2178, 6);
+            this.menu2_3_ilanID.Location = new System.Drawing.Point(2614, 6);
             this.menu2_3_ilanID.Name = "menu2_3_ilanID";
             this.menu2_3_ilanID.Size = new System.Drawing.Size(146, 25);
             this.menu2_3_ilanID.TabIndex = 0;
@@ -1063,105 +1162,6 @@ namespace FreePet
             this.menu4_Panel.Size = new System.Drawing.Size(150, 150);
             this.menu4_Panel.TabIndex = 10;
             this.menu4_Panel.Visible = false;
-            // 
-            // vetAltpanel
-            // 
-            this.vetAltpanel.Controls.Add(this.vet_sayfa);
-            this.vetAltpanel.Controls.Add(this.vetSayfaBilgi);
-            this.vetAltpanel.Controls.Add(this.vetSayfaGeri);
-            this.vetAltpanel.Controls.Add(this.vetSayfaİleri);
-            this.vetAltpanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.vetAltpanel.Location = new System.Drawing.Point(0, 123);
-            this.vetAltpanel.Name = "vetAltpanel";
-            this.vetAltpanel.Size = new System.Drawing.Size(577, 107);
-            this.vetAltpanel.TabIndex = 3;
-            this.vetAltpanel.Visible = false;
-            // 
-            // vet_sayfa
-            // 
-            this.vet_sayfa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.vet_sayfa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.vet_sayfa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vet_sayfa.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.vet_sayfa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.vet_sayfa.Location = new System.Drawing.Point(263, 30);
-            this.vet_sayfa.MaxLength = 3;
-            this.vet_sayfa.Name = "vet_sayfa";
-            this.vet_sayfa.Size = new System.Drawing.Size(46, 24);
-            this.vet_sayfa.TabIndex = 3;
-            this.vet_sayfa.Text = "1";
-            this.vet_sayfa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // vetSayfaBilgi
-            // 
-            this.vetSayfaBilgi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.vetSayfaBilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.vetSayfaBilgi.ForeColor = System.Drawing.Color.DarkGray;
-            this.vetSayfaBilgi.Location = new System.Drawing.Point(6, 66);
-            this.vetSayfaBilgi.Name = "vetSayfaBilgi";
-            this.vetSayfaBilgi.Size = new System.Drawing.Size(565, 18);
-            this.vetSayfaBilgi.TabIndex = 0;
-            this.vetSayfaBilgi.Text = "Toplam 0 sayfa içerisinde 0. sayfayı görmektesiniz.";
-            this.vetSayfaBilgi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // vetSayfaGeri
-            // 
-            this.vetSayfaGeri.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.vetSayfaGeri.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.vetSayfaGeri.FlatAppearance.BorderSize = 0;
-            this.vetSayfaGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vetSayfaGeri.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.vetSayfaGeri.ForeColor = System.Drawing.Color.White;
-            this.vetSayfaGeri.Location = new System.Drawing.Point(217, 23);
-            this.vetSayfaGeri.Name = "vetSayfaGeri";
-            this.vetSayfaGeri.Size = new System.Drawing.Size(40, 40);
-            this.vetSayfaGeri.TabIndex = 0;
-            this.vetSayfaGeri.Text = "<";
-            this.vetSayfaGeri.UseVisualStyleBackColor = true;
-            this.vetSayfaGeri.Click += new System.EventHandler(this.vetSayfaGeri_Click);
-            // 
-            // vetSayfaİleri
-            // 
-            this.vetSayfaİleri.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.vetSayfaİleri.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.vetSayfaİleri.FlatAppearance.BorderSize = 0;
-            this.vetSayfaİleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vetSayfaİleri.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.vetSayfaİleri.ForeColor = System.Drawing.Color.White;
-            this.vetSayfaİleri.Location = new System.Drawing.Point(315, 23);
-            this.vetSayfaİleri.Name = "vetSayfaİleri";
-            this.vetSayfaİleri.Size = new System.Drawing.Size(40, 40);
-            this.vetSayfaİleri.TabIndex = 0;
-            this.vetSayfaİleri.Text = ">";
-            this.vetSayfaİleri.UseVisualStyleBackColor = true;
-            this.vetSayfaİleri.Click += new System.EventHandler(this.vetSayfaİleri_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Şehir Seçiniz",
-            "İstanbul",
-            "Ankara",
-            "İzmir"});
-            this.comboBox1.Location = new System.Drawing.Point(167, 11);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 32);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Text = "Şehir Seçiniz";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "İlçe Seçiniz",
-            "Merkez"});
-            this.comboBox2.Location = new System.Drawing.Point(346, 11);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(231, 32);
-            this.comboBox2.TabIndex = 4;
-            this.comboBox2.Text = "İlçe Seçiniz";
             // 
             // Form2
             // 
@@ -1200,13 +1200,13 @@ namespace FreePet
             this.ilan_altPanel.PerformLayout();
             this.menu5_Panel.ResumeLayout(false);
             this.menu5_Panel.PerformLayout();
+            this.vetAltpanel.ResumeLayout(false);
+            this.vetAltpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_2)).EndInit();
             this.menu2_3_Panel.ResumeLayout(false);
             this.menu2_3_Panel.PerformLayout();
             this.menu2_Panel.ResumeLayout(false);
-            this.vetAltpanel.ResumeLayout(false);
-            this.vetAltpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
