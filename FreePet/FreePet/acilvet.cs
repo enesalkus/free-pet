@@ -48,16 +48,10 @@ namespace FreePet
             get { return vetfoto.Image; }
             set { vetfoto.Image = value; }
         }
-
-
-        private void klnkadres1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public void Vet_Click(EventHandler handler)
         {
-
-            //panel1.Dock = DockStyle.Fill;
-            //pictureBox1.Visible = false;
-            //webBrowser1.Visible = true;     
-            //webBrowser1.Dock = DockStyle.Fill;
-            
+            vetfoto.Click += handler;
+            klnkad.Click += handler;
         }
     }
 }

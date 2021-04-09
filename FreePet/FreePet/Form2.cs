@@ -59,7 +59,7 @@ namespace FreePet
 
         public void sayfaDegistir(Control c)
         {
-            string[] menuler = { "menu1", "menu2", "menu2_1", "menu2_2", "menu3", "menu4", "menu5" };
+            string[] menuler = { "menu1", "menu2", "menu2_1", "menu2_2", "menu3", "menu4", "menu5","menu2_3" };
             if (menuler.Contains(c.Name) && c.Name != "menu2_1" && c.Name != "menu2_2")
             {
                 menu.Location = new Point(0, c.Location.Y);
@@ -497,6 +497,51 @@ namespace FreePet
                 bag.HashSet("Users", Genel.kad, newPic);
             }
         }
+        private void vet_Click(object sender, EventArgs e)
+        {
+            Control c = (Control)sender;
+            string[] menuler = { "menu1", "menu2", "menu2_1", "menu2_2","menu2_3", "menu3", "menu4", "menu5" };
+            foreach (string item in menuler)
+            { this.Controls[item + "_Panel"].Visible = false; }
+            menu5_icerik.Controls.Clear();
+            menu5_1panel.Dock = DockStyle.Fill;
+            menu5_1panel.BringToFront();
+            menu5_1panel.Visible = true;
+            galeri.Controls.Clear();
+            resimler.Clear();
+            galeri.Visible = true;
+            int id = 126281;
+            RedisValue rv = bag.HashGet("Vets",id);
+            if (rv.HasValue)
+            {
+                menu5_1panel_klnksahip.Text = rv.ToString().Split(';')[0];
+                menu5_1panel_klnkad.Text = rv.ToString().Split(';')[1];
+                menu5_1panel_adres.Text = rv.ToString().Split(';')[2];
+                menu5_1panel_iletisim.Text = rv.ToString().Split(';')[3];               
+                galeri.Controls.Clear();
+                resimler.Clear();
+                galeri.Visible = true;
+
+                for (int i = 0; i < bag.ListLength("VetImage"); i++)
+                {
+                    string[] veri = bag.ListGetByIndex("VetImage", i).ToString().Split(';');
+                    
+                        PictureBox pb = new PictureBox();
+                        pb.Name = "resim_" + i;
+                        pb.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(veri[1])));
+                        pb.SizeMode = PictureBoxSizeMode.Zoom;
+                        pb.Size = new Size(galeri.Width - 25, galeri.Width - 25);
+                        pb.BorderStyle = BorderStyle.FixedSingle;
+                        pb.Cursor = Cursors.Hand;
+                        pb.Click += buyult_Click;
+                        if (galeri.Controls.Count > 0) pb.Location = new Point(0, galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width);
+                        else pb.Location = new Point(0, 10);
+                        galeri.Controls.Add(pb);
+                    
+                }
+            }
+
+        }
         Dictionary<string, Image> vetfoto = new Dictionary<string, Image>();
         HashEntry[] vets;int toplamvet=5;
          void acilvet(int vet)
@@ -515,6 +560,7 @@ namespace FreePet
                     vt.Sahip = veri[1];
                     vt.Adres = veri[2];
                     vt.Telefon = veri[3];
+                    vt.Vet_Click(new EventHandler(vet_Click));
                     if (vetfoto.ContainsKey(vets[i].Name)) vt.Fotograf = vetfoto[vets[i].Name];
                     vt.Width = menu5_icerik.Width-40;
                     if (menu5_icerik.Controls.Count > 0)

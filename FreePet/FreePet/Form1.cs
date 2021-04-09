@@ -31,8 +31,6 @@ namespace FreePet
             panel2.Visible = false;
         }
 
-
-
         void kayitGetir()
         {
             panel2.Dock = DockStyle.Fill;
@@ -44,11 +42,6 @@ namespace FreePet
         private void Form1_Load(object sender, EventArgs e)
         {
             girisGetir();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         void girisYap()
@@ -81,7 +74,6 @@ namespace FreePet
             }
             else MessageBox.Show("Lütfen tüm alanları doldurunuz.");
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -128,11 +120,6 @@ namespace FreePet
             else if (t.Text == "" && t.Name == "k_sifretekrar") k_sifretekrar.Text = "Şifre Tekrar";
             if (t.Text == "Ad Soyad" || t.Text == "Şifre" || t.Text == "Şifre Tekrar" || t.Text == "E Posta" || t.Text == "Kullanıcı Adı")
                 t.ForeColor = Color.Silver;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("test");
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -220,5 +207,6 @@ namespace FreePet
         {
             Application.Exit();
         }
+
     }
 }
