@@ -209,9 +209,9 @@ namespace FreePet
         private System.Windows.Forms.Label klnksahip1;
         private System.Windows.Forms.Label klnktel1;
         private System.Windows.Forms.Label vetNo;
-        private System.Windows.Forms.PictureBox vetfoto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Label klnkadres1;
+        public System.Windows.Forms.PictureBox vetfoto;
     }
 }

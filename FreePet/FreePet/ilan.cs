@@ -83,5 +83,10 @@ namespace FreePet
         {
             sil.Click += handler;
         }
+
+        private void ilan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

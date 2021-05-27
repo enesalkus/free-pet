@@ -286,6 +286,7 @@ namespace FreePet
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ilan";
             this.Size = new System.Drawing.Size(804, 192);
+            this.Load += new System.EventHandler(this.ilan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ilanFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sil)).EndInit();
             this.ResumeLayout(false);

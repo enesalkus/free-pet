@@ -879,9 +879,9 @@ namespace FreePet
             this.menu2_1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.menu2_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menu2_1.Image = ((System.Drawing.Image)(resources.GetObject("menu2_1.Image")));
-            this.menu2_1.Location = new System.Drawing.Point(-220, 145);
+            this.menu2_1.Location = new System.Drawing.Point(-300, 17);
             this.menu2_1.Name = "menu2_1";
-            this.menu2_1.Size = new System.Drawing.Size(292, 292);
+            this.menu2_1.Size = new System.Drawing.Size(350, 551);
             this.menu2_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.menu2_1.TabIndex = 0;
             this.menu2_1.TabStop = false;
@@ -892,9 +892,9 @@ namespace FreePet
             this.menu2_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.menu2_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menu2_2.Image = ((System.Drawing.Image)(resources.GetObject("menu2_2.Image")));
-            this.menu2_2.Location = new System.Drawing.Point(78, 145);
+            this.menu2_2.Location = new System.Drawing.Point(93, 17);
             this.menu2_2.Name = "menu2_2";
-            this.menu2_2.Size = new System.Drawing.Size(292, 292);
+            this.menu2_2.Size = new System.Drawing.Size(350, 551);
             this.menu2_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.menu2_2.TabIndex = 1;
             this.menu2_2.TabStop = false;
@@ -1283,11 +1283,11 @@ namespace FreePet
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(1040, 630);
+            this.Controls.Add(this.menu2_Panel);
             this.Controls.Add(this.menu5_1panel);
             this.Controls.Add(this.menu5_Panel);
             this.Controls.Add(this.menu2_1_Panel);
             this.Controls.Add(this.menu2_2_Panel);
-            this.Controls.Add(this.menu2_Panel);
             this.Controls.Add(this.menu4_Panel);
             this.Controls.Add(this.menu3_Panel);
             this.Controls.Add(this.menu1_Panel);
