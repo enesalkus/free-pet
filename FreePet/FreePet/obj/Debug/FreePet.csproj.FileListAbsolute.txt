@@ -140,3 +140,4 @@ C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.ilan.r
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.acilvet.resources
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.acilvet.resources
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Giris.resources
+C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Giris.resources

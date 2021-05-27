@@ -174,7 +174,7 @@ namespace FreePet
 
         private void menu6_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1(); frm1.Show(); this.Close();
+            Giris grs = new Giris(); grs.Show(); this.Close();           
         }
         private void sil_Click(object sender, EventArgs e)
         {

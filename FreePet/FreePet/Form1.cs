@@ -126,7 +126,7 @@ namespace FreePet
         {
             if (e.KeyChar == 13)
             {
-                girisYap();
+                girisYap();               
             }
         }
 
