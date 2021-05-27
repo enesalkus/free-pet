@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-//bilgilerin bulndugu alan
 namespace FreePet
 {
     class Genel
@@ -16,6 +15,6 @@ namespace FreePet
         public static Image profil = null;
         public static string eposta = "default";
         public static string sifre = "default";
-        public static string connString = "185.255.93.52:6379,password=";
+        public static string connString = "127.0.0.1:6379,password=";
     }
 }

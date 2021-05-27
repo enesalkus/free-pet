@@ -528,7 +528,7 @@ namespace FreePet
                 for (int i = 0; i < bag.ListLength("VetImage"); i++)
                 {
                     string[] veri = bag.ListGetByIndex("VetImage", i).ToString().Split(';');
-
+                    pictureBox1.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(veri[1])));
                     PictureBox pb = new PictureBox();
                     pb.Name = "resim_" + i;
                     pb.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(veri[1])));
@@ -578,7 +578,7 @@ namespace FreePet
                 }
             }
         }
-        //akedeşler burda bele bi kod var haberiniz olsun(!)
+
         private void vetSayfaGeri_Click(object sender, EventArgs e)
         {
             int sayfa = int.Parse(vet_sayfa.Text);
