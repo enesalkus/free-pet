@@ -122,6 +122,7 @@ namespace FreePet
             this.menu5_1panel_klnksahip = new System.Windows.Forms.Label();
             this.menu5_1panel_klnkad = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menu2_3_kullaniciFoto)).BeginInit();
@@ -652,6 +653,7 @@ namespace FreePet
             // menu2_1_Panel
             // 
             this.menu2_1_Panel.AutoScroll = true;
+            this.menu2_1_Panel.Controls.Add(this.comboBox3);
             this.menu2_1_Panel.Controls.Add(this.label24);
             this.menu2_1_Panel.Controls.Add(this.ilan_altPanel);
             this.menu2_1_Panel.Controls.Add(this.menu4_icerik);
@@ -886,7 +888,7 @@ namespace FreePet
             this.label15.ForeColor = System.Drawing.Color.Gainsboro;
             this.label15.Location = new System.Drawing.Point(7, 11);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(4811, 32);
+            this.label15.Size = new System.Drawing.Size(5238, 32);
             this.label15.TabIndex = 2;
             this.label15.Text = "Filtreleme Bölümü :";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -899,7 +901,7 @@ namespace FreePet
             this.menu5_icerik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.menu5_icerik.Location = new System.Drawing.Point(4, 52);
             this.menu5_icerik.Name = "menu5_icerik";
-            this.menu5_icerik.Size = new System.Drawing.Size(1371, 50);
+            this.menu5_icerik.Size = new System.Drawing.Size(1798, 50);
             this.menu5_icerik.TabIndex = 1;
             // 
             // menu2_1
@@ -1043,7 +1045,7 @@ namespace FreePet
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(6013, 34);
+            this.button1.Location = new System.Drawing.Point(6307, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 40);
             this.button1.TabIndex = 1;
@@ -1058,7 +1060,7 @@ namespace FreePet
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(2956, 4326);
+            this.button2.Location = new System.Drawing.Point(3103, 4630);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 40);
             this.button2.TabIndex = 1;
@@ -1073,7 +1075,7 @@ namespace FreePet
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3063, 4326);
+            this.button3.Location = new System.Drawing.Point(3210, 4630);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 40);
             this.button3.TabIndex = 1;
@@ -1169,7 +1171,7 @@ namespace FreePet
             // 
             this.menu2_3_ilanID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.menu2_3_ilanID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.menu2_3_ilanID.Location = new System.Drawing.Point(1600, 8);
+            this.menu2_3_ilanID.Location = new System.Drawing.Point(1894, 8);
             this.menu2_3_ilanID.Name = "menu2_3_ilanID";
             this.menu2_3_ilanID.Size = new System.Drawing.Size(146, 31);
             this.menu2_3_ilanID.TabIndex = 0;
@@ -1304,6 +1306,19 @@ namespace FreePet
             this.label16.Size = new System.Drawing.Size(80, 20);
             this.label16.TabIndex = 0;
             this.label16.Text = "Klinik Adı :";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Kuş",
+            "Kedi",
+            "Köpek",
+            "Balık"});
+            this.comboBox3.Location = new System.Drawing.Point(167, 20);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(399, 21);
+            this.comboBox3.TabIndex = 3;
             // 
             // Form2
             // 
@@ -1452,5 +1467,6 @@ namespace FreePet
         private System.Windows.Forms.Label menu5_1panel_klnkad;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
