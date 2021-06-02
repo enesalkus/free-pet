@@ -254,6 +254,7 @@ namespace FreePet
 
             ilan_sayfaBilgi.Text = "Toplam " + Math.Ceiling(decimal.Parse("" + (ilanlar.Length / (float)maxIlan))) + " sayfa içerisinde " + syf + ". sayfayı görmektesiniz.";
             int sayfa = (syf * maxIlan);
+            int genislik = menu4_icerik.Width;
             for (int i = sayfa - maxIlan; i < ilanlar.Length; i++)
             {
                 if (i < sayfa)
@@ -277,7 +278,7 @@ namespace FreePet
                     il.Proje_Click(new EventHandler(ilan_Click));
                     il.sil_Click(new EventHandler(sil_Click));
                     if (ilanResimleri.ContainsKey(ilanlar[i].Name)) il.Fotograf = ilanResimleri[ilanlar[i].Name];
-                    il.Width = menu4_icerik.Width - 80;
+                    il.Width = genislik-40;
                     if (menu4_icerik.Controls.Count > 0)
                         il.Location = new Point(10, menu4_icerik.Controls[menu4_icerik.Controls.Count - 1].Location.Y + il.Size.Height + 10);
                     else il.Location = new Point(10, 10);
