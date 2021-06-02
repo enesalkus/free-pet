@@ -52,7 +52,7 @@ namespace FreePet
                         Genel.sifre = pass;
                         Genel.adsoyad = rv.ToString().Split(';')[0];
                         Genel.eposta = rv.ToString().Split(';')[2];
-                        if (rv.ToString().Split(';')[3] != "null")
+                        if (rv.ToString().Split(';').Length >= 3 && rv.ToString().Split(';')[3] != "")
                             Genel.profil = Image.FromStream(new MemoryStream(Convert.FromBase64String(rv.ToString().Split(';')[3])));
                         Form2 frm2 = new Form2();
                         frm2.Show();

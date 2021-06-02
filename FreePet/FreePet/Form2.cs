@@ -232,12 +232,12 @@ namespace FreePet
                         pb.Name = "resim_" + i;
                         pb.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(veri[1])));
                         pb.SizeMode = PictureBoxSizeMode.Zoom;
-                        pb.Size = new Size(galeri.Width - 25, galeri.Width - 25);
+                        pb.Size = new Size(galeri.Width - 50, galeri.Width - 50);
                         pb.BorderStyle = BorderStyle.FixedSingle;
                         pb.Cursor = Cursors.Hand;
                         pb.Click += buyult_Click;
-                        if (galeri.Controls.Count > 0) pb.Location = new Point(0, galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width);
-                        else pb.Location = new Point(0, 10);
+                        if (galeri.Controls.Count > 0) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width - 40);
+                        else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 10);
                         galeri.Controls.Add(pb);
                     }
                 }
@@ -357,12 +357,12 @@ namespace FreePet
                 pb.Name = item.Key;
                 pb.Image = Image.FromFile(item.Value);
                 pb.SizeMode = PictureBoxSizeMode.Zoom;
-                pb.Size = new Size(galeri.Width - 25, galeri.Width - 25);
+                pb.Size = new Size(galeri.Width - 50, galeri.Width - 50);
                 pb.BorderStyle = BorderStyle.FixedSingle;
                 pb.Click += galeri_Click;
                 pb.Cursor = Cursors.Hand;
-                if (galeri.Controls.Count > 0) pb.Location = new Point(0, galeri.Controls[galeri.Controls.Count - 1].Location.Y + 10 + galeri.Width);
-                else pb.Location = new Point(0, 10);
+                if (galeri.Controls.Count > 0) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width - 40);
+                else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 10);
                 galeri.Controls.Add(pb);
             }
             if (galeri.Controls.Count < 1) galeri.Visible = false;
@@ -387,6 +387,20 @@ namespace FreePet
                 galeri.Controls.Clear();
                 resimler.Clear();
                 galeri.Visible = true;
+                Panel pnl = new Panel();
+                pnl.Size = new Size(0,68);
+                pnl.Dock = DockStyle.Top;
+                galeri.Controls.Add(pnl);
+                Label lbl = new Label();
+                lbl.Text = "Fotoğraf kaldırmak için fotoğrafa tıklayınız";
+                lbl.Size = new Size(236, 49);
+                lbl.TextAlign = ContentAlignment.MiddleCenter;
+                lbl.Location = new Point(14, 10);
+                lbl.Anchor = (AnchorStyles.Top | AnchorStyles.Left) | AnchorStyles.Right;
+
+                lbl.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+                lbl.ForeColor = Color.Gainsboro;
+                pnl.Controls.Add(lbl);
                 for (int i = 0; i < DosyaYolu.Length; i++)
                 {
                     PictureBox pb = new PictureBox();
@@ -394,12 +408,12 @@ namespace FreePet
                     resimler.Add(pb.Name, DosyaYolu[i]);
                     pb.Image = Image.FromFile(DosyaYolu[i]);
                     pb.SizeMode = PictureBoxSizeMode.Zoom;
-                    pb.Size = new Size(galeri.Width-25, galeri.Width-25);
+                    pb.Size = new Size(galeri.Width-50, galeri.Width-50);
                     pb.BorderStyle = BorderStyle.FixedSingle;
                     pb.Click += galeri_Click;
                     pb.Cursor = Cursors.Hand;
-                    if (resimler.Count > 1) pb.Location = new Point(0, galeri.Controls[galeri.Controls.Count - 1].Location.Y + 10 +galeri.Width);
-                    else pb.Location = new Point(0, 10);
+                    if (resimler.Count > 1) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width-40);
+                    else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 10);
                     galeri.Controls.Add(pb);
                 }
             }
@@ -487,12 +501,11 @@ namespace FreePet
             ofd.Title = "Fotoğrafları Seç";
             ofd.Multiselect = false;
             if (ofd.ShowDialog() == DialogResult.OK)
-
             {
                 RedisValue rv = bag.HashGet("Users", Genel.kad);
-                string oldPic = rv.ToString().Split(';')[3];
+                string[] veri = rv.ToString().Split(';');
                 byte[] imageArray = System.IO.File.ReadAllBytes(ofd.FileName);
-                string newPic = rv.ToString().Replace(oldPic, Convert.ToBase64String(test(imageArray)));
+                string newPic = $"{veri[0]};{veri[1]};{veri[2]};{Convert.ToBase64String(test(imageArray))};";
                 pictureBox4.Image = Image.FromStream(new MemoryStream(test(imageArray)));
                 bag.HashSet("Users", Genel.kad, newPic);
             }

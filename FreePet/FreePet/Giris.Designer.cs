@@ -52,6 +52,7 @@ namespace FreePet
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 18);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "pelin26";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
@@ -66,6 +67,7 @@ namespace FreePet
             this.textBox2.PasswordChar = '●';
             this.textBox2.Size = new System.Drawing.Size(181, 15);
             this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "pelin26";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
