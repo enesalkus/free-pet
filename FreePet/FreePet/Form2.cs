@@ -134,6 +134,7 @@ namespace FreePet
 
         private void menu3_Click(object sender, EventArgs e)
         {
+
             sayfaDegistir(menu3);
         }
         private void menu4_Click(object sender, EventArgs e)
@@ -148,16 +149,17 @@ namespace FreePet
             menu5_icerik.Controls.Clear();
             vetfoto.Clear();
             vetAltpanel.Visible = false;
+
             #region Yükleniyor
             Label lbl = new Label();
             lbl.Text = "Yükleniyor..";
-            lbl.Size = new Size(menu4_icerik.Width - 10, 32);
+            lbl.Size = new Size(menu5_icerik.Width - 10, 32);
             lbl.Location = new Point(5, 245);
             lbl.AutoSize = false;
             lbl.TextAlign = ContentAlignment.MiddleCenter;
             lbl.ForeColor = Color.Silver;
             lbl.Font = new Font("Microsoft Sans Serif", 12);
-            menu4_icerik.Controls.Add(lbl);
+            menu5_icerik.Controls.Add(lbl);
             #endregion
             for (int i = 0; i < bag.ListLength("VetImage"); i++)
             {

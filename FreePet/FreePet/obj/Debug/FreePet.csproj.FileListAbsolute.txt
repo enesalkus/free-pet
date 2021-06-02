@@ -90,7 +90,6 @@ C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\System.Numeric
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\System.Threading.Channels.xml
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csprojAssemblyReference.cache
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Form1.resources
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Form2.resources
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Properties.Resources.resources
@@ -141,3 +140,4 @@ C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.acilve
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.acilvet.resources
 C:\Users\NS\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Giris.resources
 C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.Giris.resources
+C:\Users\umuts\Documents\GitHub\FreePet\FreePet\FreePet\obj\Debug\FreePet.csproj.AssemblyReference.cache
