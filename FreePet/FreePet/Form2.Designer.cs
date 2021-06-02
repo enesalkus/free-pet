@@ -606,9 +606,9 @@ namespace FreePet
             this.galeri.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.galeri.Controls.Add(this.panel3);
             this.galeri.Dock = System.Windows.Forms.DockStyle.Right;
-            this.galeri.Location = new System.Drawing.Point(776, 48);
+            this.galeri.Location = new System.Drawing.Point(757, 48);
             this.galeri.Name = "galeri";
-            this.galeri.Size = new System.Drawing.Size(264, 582);
+            this.galeri.Size = new System.Drawing.Size(283, 582);
             this.galeri.TabIndex = 9;
             this.galeri.Visible = false;
             // 
@@ -618,7 +618,7 @@ namespace FreePet
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(262, 68);
+            this.panel3.Size = new System.Drawing.Size(281, 68);
             this.panel3.TabIndex = 0;
             // 
             // label21
@@ -629,7 +629,7 @@ namespace FreePet
             this.label21.ForeColor = System.Drawing.Color.Gainsboro;
             this.label21.Location = new System.Drawing.Point(14, 10);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(236, 49);
+            this.label21.Size = new System.Drawing.Size(255, 49);
             this.label21.TabIndex = 1;
             this.label21.Text = "Fotoğraf kaldırmak için fotoğrafa tıklayınız";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -885,7 +885,7 @@ namespace FreePet
             this.label15.ForeColor = System.Drawing.Color.Gainsboro;
             this.label15.Location = new System.Drawing.Point(7, 11);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(4384, 32);
+            this.label15.Size = new System.Drawing.Size(4811, 32);
             this.label15.TabIndex = 2;
             this.label15.Text = "Filtreleme Bölümü :";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -898,7 +898,7 @@ namespace FreePet
             this.menu5_icerik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.menu5_icerik.Location = new System.Drawing.Point(4, 52);
             this.menu5_icerik.Name = "menu5_icerik";
-            this.menu5_icerik.Size = new System.Drawing.Size(944, 50);
+            this.menu5_icerik.Size = new System.Drawing.Size(1371, 50);
             this.menu5_icerik.TabIndex = 1;
             // 
             // menu2_1
@@ -955,7 +955,7 @@ namespace FreePet
             this.menu2_3_Panel.ForeColor = System.Drawing.Color.White;
             this.menu2_3_Panel.Location = new System.Drawing.Point(376, 213);
             this.menu2_3_Panel.Name = "menu2_3_Panel";
-            this.menu2_3_Panel.Size = new System.Drawing.Size(150, 150);
+            this.menu2_3_Panel.Size = new System.Drawing.Size(150, 148);
             this.menu2_3_Panel.TabIndex = 11;
             this.menu2_3_Panel.Tag = "menu2_3_Panel";
             this.menu2_3_Panel.Visible = false;
@@ -1031,7 +1031,7 @@ namespace FreePet
             this.menu2_3_aciklama.Location = new System.Drawing.Point(166, 329);
             this.menu2_3_aciklama.Name = "menu2_3_aciklama";
             this.menu2_3_aciklama.ReadOnly = true;
-            this.menu2_3_aciklama.Size = new System.Drawing.Size(420, 123);
+            this.menu2_3_aciklama.Size = new System.Drawing.Size(278, 123);
             this.menu2_3_aciklama.TabIndex = 1;
             this.menu2_3_aciklama.Text = "";
             // 
@@ -1042,7 +1042,7 @@ namespace FreePet
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(5719, 34);
+            this.button1.Location = new System.Drawing.Point(6013, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 40);
             this.button1.TabIndex = 1;
@@ -1057,7 +1057,7 @@ namespace FreePet
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(2809, 4024);
+            this.button2.Location = new System.Drawing.Point(2956, 4326);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 40);
             this.button2.TabIndex = 1;
@@ -1072,7 +1072,7 @@ namespace FreePet
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(2916, 4024);
+            this.button3.Location = new System.Drawing.Point(3063, 4326);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 40);
             this.button3.TabIndex = 1;
@@ -1168,7 +1168,7 @@ namespace FreePet
             // 
             this.menu2_3_ilanID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.menu2_3_ilanID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.menu2_3_ilanID.Location = new System.Drawing.Point(1306, 8);
+            this.menu2_3_ilanID.Location = new System.Drawing.Point(1600, 8);
             this.menu2_3_ilanID.Name = "menu2_3_ilanID";
             this.menu2_3_ilanID.Size = new System.Drawing.Size(146, 31);
             this.menu2_3_ilanID.TabIndex = 0;
@@ -1310,6 +1310,7 @@ namespace FreePet
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(1040, 630);
+            this.Controls.Add(this.menu2_3_Panel);
             this.Controls.Add(this.menu2_2_Panel);
             this.Controls.Add(this.menu2_Panel);
             this.Controls.Add(this.menu5_1panel);
@@ -1321,7 +1322,6 @@ namespace FreePet
             this.Controls.Add(this.galeri);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menu2_3_Panel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";

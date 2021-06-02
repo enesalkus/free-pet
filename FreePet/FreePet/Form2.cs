@@ -224,8 +224,9 @@ namespace FreePet
                 galeri.Controls.Clear();
                 resimler.Clear();
                 galeri.Visible = true;
-
-                for (int i = 0; i < bag.ListLength("Images"); i++)
+                long length = bag.ListLength("Images");
+                if(length > 0) galeriLbl("Fotoğraf büyültmek için fotoğrafa tıklayınız");
+                for (int i = 0; i < length; i++)
                 {
                     string[] veri = bag.ListGetByIndex("Images", i).ToString().Split(';');
                     if (veri[0] == c.Tag.ToString())
@@ -238,8 +239,8 @@ namespace FreePet
                         pb.BorderStyle = BorderStyle.FixedSingle;
                         pb.Cursor = Cursors.Hand;
                         pb.Click += buyult_Click;
-                        if (galeri.Controls.Count > 0) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width - 40);
-                        else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 10);
+                        if (galeri.Controls.Count > 2) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width - 40);
+                        else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 80);
                         galeri.Controls.Add(pb);
                     }
                 }
@@ -276,7 +277,7 @@ namespace FreePet
                     il.Proje_Click(new EventHandler(ilan_Click));
                     il.sil_Click(new EventHandler(sil_Click));
                     if (ilanResimleri.ContainsKey(ilanlar[i].Name)) il.Fotograf = ilanResimleri[ilanlar[i].Name];
-                    il.Width = menu4_icerik.Width - 40;
+                    il.Width = menu4_icerik.Width - 80;
                     if (menu4_icerik.Controls.Count > 0)
                         il.Location = new Point(10, menu4_icerik.Controls[menu4_icerik.Controls.Count - 1].Location.Y + il.Size.Height + 10);
                     else il.Location = new Point(10, 10);
@@ -353,6 +354,7 @@ namespace FreePet
         {
             galeri.Controls.Clear();
             resimler.Remove(((PictureBox)sender).Name);
+            if (resimler.Count > 0) galeriLbl("Fotoğraf kaldırmak için fotoğrafa tıklayınız");
             foreach (var item in resimler)
             {
                 PictureBox pb = new PictureBox();
@@ -363,8 +365,8 @@ namespace FreePet
                 pb.BorderStyle = BorderStyle.FixedSingle;
                 pb.Click += galeri_Click;
                 pb.Cursor = Cursors.Hand;
-                if (galeri.Controls.Count > 0) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width - 40);
-                else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 10);
+                if (resimler.Count > 1) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width - 40);
+                else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 80);
                 galeri.Controls.Add(pb);
             }
             if (galeri.Controls.Count < 1) galeri.Visible = false;
@@ -372,8 +374,26 @@ namespace FreePet
         private void buyult_Click(object sender, EventArgs e)
         {
             PictureBox pb = (PictureBox)sender;
-            if (pb.Dock != DockStyle.Fill) { galeri.AutoScroll = false; galeri.Dock = DockStyle.Fill; galeri.BringToFront(); pb.Dock = DockStyle.Fill; pb.BringToFront(); }
-            else { galeri.AutoScroll = true; galeri.Dock = DockStyle.Right; menu2_3_Panel.BringToFront(); pb.Dock = DockStyle.None; }
+            if (pb.Dock != DockStyle.Fill) { galeri.AutoScroll = false; galeri.Dock = DockStyle.Fill; galeri.Controls[galeri.Controls.IndexOfKey("galeriBaslik")].Visible = false; galeri.BringToFront(); pb.Dock = DockStyle.Fill; pb.BringToFront(); }
+            else { galeri.AutoScroll = true; galeri.Dock = DockStyle.Right; menu2_3_Panel.BringToFront(); pb.Dock = DockStyle.None; galeri.Controls[galeri.Controls.IndexOfKey("galeriBaslik")].Visible = true; }
+        }
+
+        void galeriLbl(string yazi)
+        {
+            Panel pnl = new Panel();
+            pnl.Size = new Size(0, 70);
+            pnl.Dock = DockStyle.Top;
+            pnl.Name = "galeriBaslik";
+            galeri.Controls.Add(pnl);
+            Label lbl = new Label();
+            lbl.Text = yazi;
+            lbl.Size = new Size(236, 50);
+            lbl.TextAlign = ContentAlignment.MiddleCenter;
+            lbl.Location = new Point((galeri.Width / 2) - (lbl.Width / 2), 10);
+            lbl.Anchor = (AnchorStyles.Top | AnchorStyles.Left) | AnchorStyles.Right;
+            lbl.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
+            lbl.ForeColor = Color.Gainsboro;
+            pnl.Controls.Add(lbl);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -389,20 +409,7 @@ namespace FreePet
                 galeri.Controls.Clear();
                 resimler.Clear();
                 galeri.Visible = true;
-                Panel pnl = new Panel();
-                pnl.Size = new Size(0,68);
-                pnl.Dock = DockStyle.Top;
-                galeri.Controls.Add(pnl);
-                Label lbl = new Label();
-                lbl.Text = "Fotoğraf kaldırmak için fotoğrafa tıklayınız";
-                lbl.Size = new Size(236, 49);
-                lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.Location = new Point(14, 10);
-                lbl.Anchor = (AnchorStyles.Top | AnchorStyles.Left) | AnchorStyles.Right;
-
-                lbl.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-                lbl.ForeColor = Color.Gainsboro;
-                pnl.Controls.Add(lbl);
+                galeriLbl("Fotoğraf kaldırmak için fotoğrafa tıklayınız");
                 for (int i = 0; i < DosyaYolu.Length; i++)
                 {
                     PictureBox pb = new PictureBox();
@@ -414,8 +421,8 @@ namespace FreePet
                     pb.BorderStyle = BorderStyle.FixedSingle;
                     pb.Click += galeri_Click;
                     pb.Cursor = Cursors.Hand;
-                    if (resimler.Count > 1) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width-40);
-                    else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 10);
+                    if (resimler.Count > 1) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width - 40);
+                    else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 80);
                     galeri.Controls.Add(pb);
                 }
             }
