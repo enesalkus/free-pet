@@ -94,5 +94,10 @@ namespace FreePet
             kyt.Show();
             this.Hide();
         }
+
+        private void panel3_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

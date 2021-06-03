@@ -42,6 +42,7 @@ namespace FreePet
             this.instagram = new System.Windows.Forms.Panel();
             this.facebook = new System.Windows.Forms.Panel();
             this.lbl_hata = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // k_kullaniciadi
@@ -183,6 +184,16 @@ namespace FreePet
             this.lbl_hata.TabIndex = 9;
             this.lbl_hata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Location = new System.Drawing.Point(362, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(26, 25);
+            this.panel3.TabIndex = 10;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click_1);
+            // 
             // Kayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +202,7 @@ namespace FreePet
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(400, 511);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.lbl_hata);
             this.Controls.Add(this.discord);
             this.Controls.Add(this.twitter);
@@ -229,5 +241,6 @@ namespace FreePet
         private System.Windows.Forms.Panel instagram;
         private System.Windows.Forms.Panel facebook;
         private System.Windows.Forms.Label lbl_hata;
+        private System.Windows.Forms.Panel panel3;
     }
 }

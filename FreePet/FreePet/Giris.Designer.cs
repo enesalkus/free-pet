@@ -39,6 +39,7 @@ namespace FreePet
             this.twitter = new System.Windows.Forms.Panel();
             this.discord = new System.Windows.Forms.Panel();
             this.lbl_hata = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // textBox1
@@ -52,7 +53,6 @@ namespace FreePet
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 18);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "pelin26";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
@@ -67,7 +67,6 @@ namespace FreePet
             this.textBox2.PasswordChar = '●';
             this.textBox2.Size = new System.Drawing.Size(181, 15);
             this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "pelin26";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
@@ -144,6 +143,16 @@ namespace FreePet
             this.lbl_hata.TabIndex = 3;
             this.lbl_hata.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Location = new System.Drawing.Point(362, 14);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(26, 25);
+            this.panel3.TabIndex = 4;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click_1);
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -152,6 +161,7 @@ namespace FreePet
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(400, 511);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.lbl_hata);
             this.Controls.Add(this.discord);
             this.Controls.Add(this.twitter);
@@ -186,5 +196,6 @@ namespace FreePet
         private System.Windows.Forms.Panel twitter;
         private System.Windows.Forms.Panel discord;
         private System.Windows.Forms.Label lbl_hata;
+        private System.Windows.Forms.Panel panel3;
     }
 }

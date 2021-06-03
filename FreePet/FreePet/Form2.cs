@@ -138,6 +138,7 @@ namespace FreePet
                 foreach (var item in bag.HashGetAll("Advert"))
                 { ilanlar2.Add(item.Name, item.Value); }
             }
+
             ilanListele(1);
             ilan_altPanel.Visible = true;
         }
@@ -149,12 +150,12 @@ namespace FreePet
 
         private void menu3_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Bu proje 191103021 Ayet Enes Alkuş, 191103024 Umut Savaş, 191103009 Engin Altun tarafından hazırlanmıştır.");
             sayfaDegistir(menu3);
         }
         private void menu4_Click(object sender, EventArgs e)
         {
-            sayfaDegistir(menu4);
+            //sayfaDegistir(menu4);
         }
 
         private void menu5_Click(object sender, EventArgs e)
@@ -296,7 +297,7 @@ namespace FreePet
                         il.Proje_Click(new EventHandler(ilan_Click));
                         il.sil_Click(new EventHandler(sil_Click));
                         if (ilanResimleri.ContainsKey(item.Key)) il.Fotograf = ilanResimleri[item.Key];
-                        il.Width = genislik - 40;
+                        il.Width = genislik ;
                         if (menu4_icerik.Controls.Count > 0)
                             il.Location = new Point(10, menu4_icerik.Controls[menu4_icerik.Controls.Count - 1].Location.Y + il.Size.Height + 10);
                         else il.Location = new Point(10, 10);
@@ -574,12 +575,12 @@ namespace FreePet
                         pb.Name = "resim_" + i;
                         pb.Image = Image.FromStream(new MemoryStream(Convert.FromBase64String(veri[1])));
                         pb.SizeMode = PictureBoxSizeMode.Zoom;
-                        pb.Size = new Size(galeri.Width - 25, galeri.Width - 25);
+                        pb.Size = new Size(galeri.Width - 50, galeri.Width - 50);
                         pb.BorderStyle = BorderStyle.FixedSingle;
                         pb.Cursor = Cursors.Hand;
-                        pb.Click += buyult_Click;
-                        if (galeri.Controls.Count > 0) pb.Location = new Point(0, galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width);
-                        else pb.Location = new Point(0, 10);
+                      //  pb.Click += buyult_Click;
+                        if (galeri.Controls.Count > 0) pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), galeri.Controls[galeri.Controls.Count - 1].Location.Y + galeri.Width);
+                        else pb.Location = new Point((galeri.Width / 2) - (pb.Size.Width / 2), 10);
                         galeri.Controls.Add(pb);
                     }
                    
