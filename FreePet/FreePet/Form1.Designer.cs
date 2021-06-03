@@ -138,11 +138,10 @@ namespace FreePet
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(86, 291);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 448);
+            this.panel1.Size = new System.Drawing.Size(97, 64);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -243,9 +242,10 @@ namespace FreePet
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.pictureBox6);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(244, 220);
+            this.panel2.Size = new System.Drawing.Size(351, 448);
             this.panel2.TabIndex = 10;
             this.panel2.Visible = false;
             // 
@@ -374,8 +374,8 @@ namespace FreePet
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(351, 448);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

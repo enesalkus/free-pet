@@ -78,5 +78,21 @@ namespace FreePet
             if (e.KeyChar == 13) girisYap();
 
         }
+
+        private void Giris_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            Kayit kyt = new Kayit();
+            kyt.Show();
+            this.Hide();
+        }
     }
 }

@@ -128,7 +128,7 @@ namespace FreePet
             // 
             this.ilanNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ilanNo.ForeColor = System.Drawing.Color.Gray;
-            this.ilanNo.Location = new System.Drawing.Point(722, 163);
+            this.ilanNo.Location = new System.Drawing.Point(655, 163);
             this.ilanNo.Name = "ilanNo";
             this.ilanNo.Size = new System.Drawing.Size(79, 24);
             this.ilanNo.TabIndex = 2;
@@ -190,7 +190,7 @@ namespace FreePet
             this.cins1.ForeColor = System.Drawing.Color.Yellow;
             this.cins1.Location = new System.Drawing.Point(549, 57);
             this.cins1.Name = "cins1";
-            this.cins1.Size = new System.Drawing.Size(241, 22);
+            this.cins1.Size = new System.Drawing.Size(153, 22);
             this.cins1.TabIndex = 1;
             this.cins1.Text = "-";
             this.cins1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -202,7 +202,7 @@ namespace FreePet
             this.isim1.ForeColor = System.Drawing.Color.Yellow;
             this.isim1.Location = new System.Drawing.Point(549, 88);
             this.isim1.Name = "isim1";
-            this.isim1.Size = new System.Drawing.Size(241, 22);
+            this.isim1.Size = new System.Drawing.Size(153, 22);
             this.isim1.TabIndex = 1;
             this.isim1.Text = "-";
             this.isim1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -224,7 +224,7 @@ namespace FreePet
             this.konum1.ForeColor = System.Drawing.Color.Yellow;
             this.konum1.Location = new System.Drawing.Point(549, 119);
             this.konum1.Name = "konum1";
-            this.konum1.Size = new System.Drawing.Size(241, 22);
+            this.konum1.Size = new System.Drawing.Size(153, 22);
             this.konum1.TabIndex = 1;
             this.konum1.Text = "-";
             this.konum1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,7 +249,7 @@ namespace FreePet
             this.sil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sil.Image = ((System.Drawing.Image)(resources.GetObject("sil.Image")));
-            this.sil.Location = new System.Drawing.Point(765, 4);
+            this.sil.Location = new System.Drawing.Point(698, 4);
             this.sil.Name = "sil";
             this.sil.Size = new System.Drawing.Size(35, 35);
             this.sil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -261,7 +261,7 @@ namespace FreePet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.sil);
             this.Controls.Add(this.ilanBaslik);
@@ -285,7 +285,7 @@ namespace FreePet
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ilan";
-            this.Size = new System.Drawing.Size(804, 192);
+            this.Size = new System.Drawing.Size(737, 192);
             this.Load += new System.EventHandler(this.ilan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ilanFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sil)).EndInit();

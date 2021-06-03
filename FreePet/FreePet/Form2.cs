@@ -102,6 +102,8 @@ namespace FreePet
             ilanResimleri.Clear();
             ilan_altPanel.Visible = false;
 
+            comboBox3.SelectedIndex = 0;
+
             #region Yükleniyor
             Label lbl = new Label();
             lbl.Text = "Yükleniyor..";
@@ -122,11 +124,24 @@ namespace FreePet
             }
 
             menu4_icerik.Controls.Clear();
-            ilanlar = bag.HashGetAll("Advert");
+            ilanlar2.Clear();
+            if (comboBox3.SelectedIndex != 0)
+            {
+                foreach (var item in bag.HashGetAll("Advert"))
+                {
+                    if (item.Value.ToString().Split(';')[2] == comboBox3.SelectedItem.ToString())
+                        ilanlar2.Add(item.Name, item.Value);
+                }
+            }
+            else
+            {
+                foreach (var item in bag.HashGetAll("Advert"))
+                { ilanlar2.Add(item.Name, item.Value); }
+            }
             ilanListele(1);
             ilan_altPanel.Visible = true;
         }
-
+        Dictionary<string, string> ilanlar2 = new Dictionary<string, string>();
         public void menu2_2_Click(object sender, EventArgs e)
         {
             sayfaDegistir(menu2_2);
@@ -251,38 +266,42 @@ namespace FreePet
         void ilanListele(int syf)
         {
             menu4_icerik.Controls.Clear();
-
-            ilan_sayfaBilgi.Text = "Toplam " + Math.Ceiling(decimal.Parse("" + (ilanlar.Length / (float)maxIlan))) + " sayfa içerisinde " + syf + ". sayfayı görmektesiniz.";
+            ilan_sayfaBilgi.Text = "Toplam " + Math.Ceiling(decimal.Parse("" + (ilanlar2.Count / (float)maxIlan))) + " sayfa içerisinde " + syf + ". sayfayı görmektesiniz.";
             int sayfa = (syf * maxIlan);
             int genislik = menu4_icerik.Width;
-            for (int i = sayfa - maxIlan; i < ilanlar.Length; i++)
+            int i = 0;
+            foreach (var item in ilanlar2)
             {
-                if (i < sayfa)
+                i++;
+                if (i >= (sayfa - maxIlan) && i <= ilanlar2.Count)
                 {
-                    ilan il = new ilan();
-                    string[] veri = ilanlar[i].Value.ToString().Split(';');
-                    il.ID = "#" + ilanlar[i].Name;
-                    il.ilanBaslik.Tag = ilanlar[i].Name;
-                    il.ilanFoto.Tag = ilanlar[i].Name;
-                    il.sil.Tag = ilanlar[i].Name;
-                    il.Baslik = veri[0];
-                    il.Isim = veri[1];
-                    il.Tur = veri[2];
-                    il.Cins = veri[3];
-                    il.Yas = veri[4];
-                    il.EngelDurumu = veri[5];
-                    il.Cinsiyet = "Belirsiz";
-                    il.Konum = "Belirsiz";
-                    il.Name = ilanlar[i].Name;
-                    if (veri[8] == Genel.kad) il.sil.Visible = true;
-                    il.Proje_Click(new EventHandler(ilan_Click));
-                    il.sil_Click(new EventHandler(sil_Click));
-                    if (ilanResimleri.ContainsKey(ilanlar[i].Name)) il.Fotograf = ilanResimleri[ilanlar[i].Name];
-                    il.Width = genislik-40;
-                    if (menu4_icerik.Controls.Count > 0)
-                        il.Location = new Point(10, menu4_icerik.Controls[menu4_icerik.Controls.Count - 1].Location.Y + il.Size.Height + 10);
-                    else il.Location = new Point(10, 10);
-                    menu4_icerik.Controls.Add(il);
+                    if (i < sayfa)
+                    {
+                        ilan il = new ilan();
+                        string[] veri = item.Value.ToString().Split(';');
+                        il.ID = "#" + item.Key;
+                        il.ilanBaslik.Tag = item.Key;
+                        il.ilanFoto.Tag = item.Key;
+                        il.sil.Tag = item.Key;
+                        il.Baslik = veri[0];
+                        il.Isim = veri[1];
+                        il.Tur = veri[2];
+                        il.Cins = veri[3];
+                        il.Yas = veri[4];
+                        il.EngelDurumu = veri[5];
+                        il.Cinsiyet = "Belirsiz";
+                        il.Konum = "Belirsiz";
+                        il.Name = item.Key;
+                        if (veri[8] == Genel.kad) il.sil.Visible = true;
+                        il.Proje_Click(new EventHandler(ilan_Click));
+                        il.sil_Click(new EventHandler(sil_Click));
+                        if (ilanResimleri.ContainsKey(item.Key)) il.Fotograf = ilanResimleri[item.Key];
+                        il.Width = genislik - 40;
+                        if (menu4_icerik.Controls.Count > 0)
+                            il.Location = new Point(10, menu4_icerik.Controls[menu4_icerik.Controls.Count - 1].Location.Y + il.Size.Height + 10);
+                        else il.Location = new Point(10, 10);
+                        menu4_icerik.Controls.Add(il);
+                    }
                 }
             }
         }
@@ -319,7 +338,7 @@ namespace FreePet
         private void ilan_sayfaIleri_Click(object sender, EventArgs e)
         {
             int sayfa = int.Parse(ilan_sayfa.Text);
-            float max = ilanlar.Length / (float)maxIlan;
+            float max = ilanlar2.Count / (float)maxIlan;
             if (max > sayfa)
             {
                 sayfa++;
@@ -624,6 +643,25 @@ namespace FreePet
                 ilanListele(sayfa);
                 menu5_Panel.VerticalScroll.Value = 0;
             }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ilanlar2.Clear();
+            if (comboBox3.SelectedIndex != 0)
+            {
+                foreach (var item in bag.HashGetAll("Advert"))
+                {
+                    if (item.Value.ToString().Split(';')[2] == comboBox3.SelectedItem.ToString())
+                        ilanlar2.Add(item.Name, item.Value);
+                }
+            }
+            else
+            {
+                foreach (var item in bag.HashGetAll("Advert"))
+                { ilanlar2.Add(item.Name, item.Value); }
+            }
+            ilanListele(1);
         }
     }
 }

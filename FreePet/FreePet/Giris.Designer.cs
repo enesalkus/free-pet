@@ -89,6 +89,8 @@ namespace FreePet
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(65, 20);
             this.panel2.TabIndex = 2;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // facebook
             // 
@@ -163,8 +165,10 @@ namespace FreePet
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Giris";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giris";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Giris_FormClosed);
             this.Load += new System.EventHandler(this.Giris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
